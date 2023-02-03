@@ -1,0 +1,607 @@
+-- integer width: 1180
+
+-- component page:
+optional caption title:
+optional body body:
+optional ftd.color bgcolor-landing-hero:
+children page-wrap:
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.base
+align-content: center
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $width
+align-self: center
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $width
+align-self: center
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $width
+align-self: center
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $width
+align-self: center
+children: $page.page-wrap
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: page
+
+-- component invoice:
+ftd.color bg-color:
+children invoice-wrap:
+optional integer padding-vertical: 50
+optional integer padding-horizontal: 85
+
+-- ftd.column:
+width: fill-container
+background.solid: $invoice.bg-color
+border-radius.px: 20
+padding-vertical.px: $invoice.padding-vertical
+padding-horizontal.px: 85
+margin-bottom.px: 30
+
+-- ftd.row:
+children: $invoice.invoice-wrap
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: invoice
+
+-- component invoice-info:
+caption title:
+string cta-label:
+body info:
+
+-- ftd.column:
+width: fill-container
+align-self: center
+
+-- ftd.text: $invoice-info.title
+role: $inherited.types.heading-large
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+margin-top.px: 32
+margin-bottom.px: 40
+
+$invoice-info.info
+
+-- button.button: $invoice-info.cta-label
+role: primary
+large: true
+radius: 20
+
+-- end: ftd.column
+
+-- end: invoice-info
+
+-- component invoice-img:
+ftd.image-src src:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.image: $invoice-img.src
+width: auto
+height: auto
+
+-- end: ftd.column
+
+-- end: invoice-img
+
+-- component card:
+caption title:
+ftd.image-src src:
+body info:
+
+-- ftd.column:
+min-height.fixed.px: 276
+max-width.fixed.px: 580
+border-width.px: 1
+padding-top.px: 35
+padding-horizontal.px: 40
+border-radius.px: 10
+spacing.fixed.px: 20
+
+-- ftd.row:
+align-content: center 
+spacing.fixed.px: 20
+
+-- ftd.image: $card.src
+
+-- ftd.text: $card.title
+
+-- end: ftd.row
+
+-- ftd.text:
+
+$card.info
+
+-- end: ftd.column
+
+-- end: card
+
+-- component card-container:
+caption title:
+string info:
+children card-wrap:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+background.solid: #fff
+
+-- ftd.text: $card-container.title
+role: $inherited.types.heading-large
+
+-- ftd.text: $card-container.info
+
+-- ftd.row:
+padding-vertical.px: 30
+wrap: true
+spacing.fixed.px: 20
+width: fill-container
+children: $card-container.card-wrap
+align-content: center
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: card-container
+
+-- component generation: 
+caption title:
+body info:
+
+-- ftd.column:
+width: fill-container
+background.solid: #fff
+padding-top.px: 100
+padding-bottom.px: 70
+
+-- ftd.column:
+max-width.fixed.px: 840
+spacing.fixed.px: 20 
+
+-- ftd.text: $generation.title
+role: $inherited.types.heading-large
+
+-- ftd.text: 
+
+$generation.info
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: generation
+
+-- component history:
+caption title:
+body info:
+ftd.image-src src:
+
+-- ftd.column:
+width: fill-container
+background.solid: #fff
+padding-top.px: 115
+padding-bottom.px: 125
+align-content: center
+
+-- ftd.column:
+padding-bottom.px: 50
+align-content: center
+
+-- ftd.text: $history.title
+role: $inherited.types.heading-large
+
+-- ftd.text: 
+
+$history.info
+
+-- end: ftd.column
+
+-- ftd.image: $history.src
+width: auto
+height: auto
+padding-horizontal.px: 58
+
+-- end: ftd.column
+
+-- end: history
+
+-- component signup:
+caption title:
+
+-- ftd.row:
+padding-vertical.px: 72
+padding-horizontal.px: 75
+background.solid: #003629
+width: fill-container
+color: #fff
+margin-bottom.px: 130
+border-radius.px: 20
+
+-- ftd.column:
+width.fixed.percent: 50
+
+-- ftd.text: $signup.title
+role: $inherited.types.heading-small
+
+-- end: ftd.column
+
+-- ftd.column:
+
+-- ftd.row:
+spacing.fixed.px: 20
+
+-- ftd.column:
+spacing.fixed.px: 15
+
+-- ftd.text-input:
+placeholder: Enter Your Work Email
+padding-vertical.px: 15
+padding-horizontal.px: 15
+border-radius.px: 30
+width.fixed.px: 310
+
+-- ftd.text: Sign up in 2 minutes
+
+-- end: ftd.column
+
+-- button.button: Sign me up
+role: primary
+large: true
+radius: 30
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: signup
+
+-- component question:
+string ques:
+body ans:
+boolean $open: false
+
+-- ftd.column:
+width: fill-container
+padding.px: 10
+background.solid: #fff 
+border-bottom-width.px: 1
+border-color: #bbb
+
+-- ftd.row:
+width: fill-container
+spacing: space-between 
+
+-- ftd.text: $question.ques
+role: $inherited.types.copy-regular
+$on-click$: $ftd.toggle($a = $question.open)
+
+-- ftd.text: `+`
+if: { question.open }
+border-radius.px: 15
+background.solid: yellow
+border-width.px: 1
+padding-vertical.px: 1
+padding-horizontal.px: 6
+
+-- ftd.text: `-`
+if: { !question.open }
+border-radius.px: 15
+background.solid: yellow
+border-width.px: 1
+padding-vertical.px: 1
+padding-horizontal.px: 6
+
+-- end: ftd.row
+
+-- ftd.text:
+margin-top.px: 20
+max-width.fixed.percent: 80
+role: $inherited.types.fine-print
+if: { question.open }
+
+$question.ans
+
+-- end: ftd.column
+
+-- end: question
+
+-- component faq:
+caption title:
+children question-wrap:
+
+-- ftd.column:
+padding-vertical.px: 70
+background.solid: #fff
+width: fill-container
+
+-- ftd.text: $faq.title
+margin-bottom.px: 70
+align-self: center
+role: $inherited.types.heading-medium
+
+-- ftd.column:
+width: fill-container
+children: $faq.question-wrap
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: faq
+
+-- component dashboard:
+children dashboard-wrap:
+ftd.image-src src:
+
+-- ftd.row:
+background.solid: #094367
+padding-vertical.px: 170
+padding-horizontal.px: 20
+spacing.fixed.px: 125
+
+-- ftd.column:
+children: $dashboard.dashboard-wrap
+
+-- end: ftd.column
+
+-- ftd.image: $dashboard.src
+
+-- end: ftd.row
+
+-- end: dashboard
+
+-- component dashboard-info:
+caption title:
+string info:
+string cta-placeholder:
+string cta-label:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.text: $dashboard-info.title
+role: $inherited.types.heading-large
+
+-- ftd.text: $dashboard-info.info
+margin-top.px: 24
+role: $inherited.types.copy-regular
+
+-- ftd.row:
+margin-top.px: 40
+
+-- ftd.text-input:
+margin-right.px: 8
+min-width.fixed.px: 240
+placeholder: $dashboard-info.cta-placeholder
+background.solid: transparent
+border-color: #000
+border-radius.px: 30
+padding.px: 15
+
+-- button.button: Sign me up
+role: primary
+large:true
+radius: 30
+;; padding-vertical.px: 15
+;; padding-horizontal.px: 30
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: dashboard-info
+
+-- component navbar:
+caption brand-name:
+string cta-label1:
+string cta-label2:
+
+-- ftd.row:
+align-content: center
+padding.px: 40
+width: fill-container
+background.solid: $inherited.colors.accent.secondary
+
+-- ftd.text: $navbar.brand-name
+role: $inherited.types.heading-small
+
+-- ftd.row:
+width: fill-container
+margin-left.px: 48
+
+-- ftd.text: page1
+role: $inherited.types.copy-regular
+
+-- ftd.text: page2
+margin-left.px: 32
+role: $inherited.types.copy-regular
+
+-- ftd.text: page3
+margin-left.px: 32
+role: $inherited.types.copy-regular
+
+-- ftd.text: page4
+margin-left.px: 32
+role: $inherited.types.copy-regular
+
+-- ftd.text: page5
+margin-left.px: 32
+role: $inherited.types.copy-regular
+
+-- end: ftd.row
+
+-- ftd.row:
+spacing.fixed.px: 24
+
+-- button.button: $navbar.cta-label1
+role: primary
+large: true
+radius: 30
+
+-- button.button: $navbar.cta-label2
+role: primary
+large: true
+radius: 30
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: navbar
+
+-- component company:
+caption name: 
+ftd.image-src src:
+
+-- ftd.row:
+align-content: center
+
+-- ftd.image: $company.src
+
+-- ftd.text: $company.name
+role: $inherited.types.heading-small
+margin-left.px: 12
+
+-- end: ftd.row
+
+-- end: company
+
+-- component companies:
+caption title:
+children companies-wrap:
+
+-- ftd.column:
+width: fill-container
+background.solid: #fff
+align-content: center
+padding-vertical.px: 100
+
+-- ftd.text: $companies.title
+role: $inherited.types.copy-regular
+
+-- ftd.row:
+margin-top.px: 30
+spacing.fixed.px: 64
+children: $companies.companies-wrap
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: companies
+
+-- component footer:
+children footer-wrap:
+
+-- ftd.row:
+background.solid: #fff
+width: fill-container
+padding-vertical.px: 100
+children: $footer.footer-wrap
+
+-- end: ftd.row
+
+-- end: footer
+
+-- component footer-child1:
+caption brand-name:
+string info:
+string copyright:
+ftd.image-src src1:
+ftd.image-src src2:
+ftd.image-src src3:
+ftd.image-src src4:
+ftd.image-src src5:
+
+-- ftd.column:
+min-width.fixed.px: 305
+
+-- ftd.text: $footer-child1.brand-name
+margin-bottom.px: 24
+
+-- ftd.text: $footer-child1.info
+role: $inherited.types.copy-small
+
+-- ftd.row:
+margin-vertical.px: 40
+spacing.fixed.px: 24
+
+-- ftd.image: $footer-child1.src1
+
+-- ftd.image: $footer-child1.src2
+
+-- ftd.image: $footer-child1.src3
+
+-- ftd.image: $footer-child1.src4
+
+-- ftd.image: $footer-child1.src5
+
+-- end: ftd.row
+
+-- ftd.text: $footer-child1.copyright
+role: $inherited.types.fine-print
+
+-- end: ftd.column
+
+-- end: footer-child1
+
+-- component footer-child2:
+caption title:
+string link1:
+string link2:
+string link3:
+string link4:
+string link5:
+
+-- ftd.column:
+spacing.fixed.px: 8
+
+-- ftd.text: $footer-child2.title
+role: $inherited.types.copy-regular
+
+-- ftd.text: $footer-child2.link1
+role: $inherited.types.copy-regular
+
+-- ftd.text: $footer-child2.link2
+role: $inherited.types.copy-regular
+
+-- ftd.text: $footer-child2.link3
+role: $inherited.types.copy-regular
+
+-- ftd.text: $footer-child2.link4
+role: $inherited.types.copy-regular
+
+-- ftd.text: $footer-child2.link5
+role: $inherited.types.copy-regular
+
+-- end: ftd.column
+
+-- end: footer-child2
