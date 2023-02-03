@@ -1,1 +1,231 @@
--- ftd.text: Hello World
+-- import: fifthtry.github.io/ds-set-2/lib as lp
+-- import: fifthtry.github.io/ds-set-2/assets
+
+
+-- lp.navbar: Fastn
+cta-label1: Login
+cta-label2: Signup
+
+-- end: lp.navbar
+
+-- lp.page:
+
+-- lp.dashboard:
+src: $assets.files.assets.dashboard.png
+
+-- lp.dashboard-info: Instant, fee-free payments for small business.
+info: Pay and get paid in real-time with zero fees. Secure, streamlined, and super fast.
+cta-placeholder: Enter Your Work Email
+cta-label: Sign me up
+
+-- end: lp.dashboard-info
+
+-- end: lp.dashboard
+
+-- lp.companies: Trusted by the top companies in this industry
+
+-- lp.company: Jiggle
+src: $assets.files.assets.jiggle.svg
+
+-- end: lp.company
+
+-- lp.company: Symtric
+src: $assets.files.assets.symtric.svg
+
+-- end: lp.company
+
+-- lp.company: Wishelp
+src: $assets.files.assets.wishelp.svg
+
+-- end: lp.company
+
+-- lp.company: resecurb
+src: $assets.files.assets.resecurb.svg
+
+-- end: lp.company
+
+-- lp.company: WELYTICS
+src: $assets.files.assets.welytics.svg
+
+-- end: lp.company
+
+-- end: lp.companies
+
+-- lp.generation: Built for the next generation of small business
+
+Hopscotch is an all-in-one payments platform where businesses can connect, transact, and grow together.
+
+-- lp.invoice:
+bg-color: $inherited.colors.custom.four
+
+-- lp.invoice-info: Easy payments  and invoicing
+cta-label: Sign me up
+
+Pay and get paid like never before. Auto-generate invoices, send reminders, schedule payments, and instantly access money when someone pays you.
+
+-- lp.invoice-img:
+src: $assets.files.assets.invoicing.svg
+
+-- end: lp.invoice
+
+-- lp.invoice:
+bg-color: $inherited.colors.custom.two
+
+-- lp.invoice-img:
+src: $assets.files.assets.cash_control.svg
+
+-- lp.invoice-info: Easy payments and invoicing
+cta-label: Sign me up
+
+Pay and get paid like never before. Auto-generate invoices, send reminders, schedule payments, and instantly access money when someone pays you.
+
+-- end: lp.invoice
+
+-- lp.invoice:
+bg-color: $inherited.colors.custom.three
+
+-- lp.invoice-info: Easy payments  and invoicing
+cta-label: Sign me up
+
+Pay and get paid like never before. Auto-generate invoices, send reminders, schedule payments, and instantly access money when someone pays you.
+
+-- lp.invoice-img:
+src: $assets.files.assets.smart_dashboard.svg
+
+-- end: lp.invoice
+
+-- lp.history: Headaches are history
+src: $assets.files.assets.history.svg
+
+Easily manage what’s coming in and going out.
+
+-- end: lp.history
+
+-- lp.faq: Frequently Answered Questions
+
+-- lp.question:
+$open: true
+ques: Are there really zero fees?
+ans: At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
+
+-- end: lp.question
+
+-- lp.question:
+ques: Are there really zero fees?
+ans: At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
+
+-- end: lp.question
+
+-- lp.question:
+ques: Are there really zero fees?
+ans: At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
+
+-- end: lp.question
+
+-- lp.question:
+ques: Are there really zero fees?
+ans: At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
+
+-- end: lp.question
+
+-- lp.question:
+ques: Are there really zero fees?
+ans: At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
+
+-- end: lp.question
+
+-- lp.question:
+ques: Are there really zero fees?
+ans: At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
+
+-- end: lp.question
+
+-- lp.question:
+ques: Are there really zero fees?
+ans: At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
+
+-- end: lp.question
+
+-- end: lp.faq
+
+-- lp.card-container: Why Hopscotch?
+info: We’re putting your other payments platform in timeout.
+
+-- lp.card: Secure
+src: $assets.files.assets.secure.svg
+
+Hopscotch transactions are protected by the latest encryption and security technology. We also leverage Plaid to keep businesses in our database safe.
+
+-- lp.card: Secure
+src: $assets.files.assets.secure.svg
+
+Hopscotch transactions are protected by the latest encryption and security technology. We also leverage Plaid to keep businesses in our database safe.
+
+-- lp.card: Secure
+src: $assets.files.assets.secure.svg
+
+Hopscotch transactions are protected by the latest encryption and security technology. We also leverage Plaid to keep businesses in our database safe.
+
+-- lp.card: Secure
+src: $assets.files.assets.secure.svg
+
+Hopscotch transactions are protected by the latest encryption and security technology. We also leverage Plaid to keep businesses in our database safe.
+
+-- end: lp.card
+
+-- end: lp.card-container
+
+-- lp.signup: Freakishly simple. Downright useful. Ready to make the jump?
+
+-- end: lp.signup
+
+-- lp.footer:
+
+-- lp.footer-child1: Fastn
+info: Stay in touch with everything you need
+copyright: Copyright ©2022. Fastn Inc.
+src1: $assets.files.assets.meta.svg
+src2: $assets.files.assets.figma.svg
+src3: $assets.files.assets.google.svg
+src4: $assets.files.assets.tweak.svg
+src5: $assets.files.assets.ball.svg
+
+-- end: lp.footer-child1
+
+-- ftd.row:
+width: fill-container
+margin-left.px: 87
+spacing: space-between
+
+-- lp.footer-child2: Heading2
+link1: Footer Link1
+link2: Footer Link2
+link3: Footer Link3
+link4: Footer Link4
+link5: Footer Link5
+
+-- end: lp.footer-child2
+
+-- lp.footer-child2: Heading3
+link1: Footer Link1
+link2: Footer Link2
+link3: Footer Link3
+link4: Footer Link4
+link5: Footer Link5
+
+-- end: lp.footer-child2
+
+-- lp.footer-child2: Heading4
+link1: Footer Link1
+link2: Footer Link2
+link3: Footer Link3
+link4: Footer Link4
+link5: Footer Link5
+
+-- end: lp.footer-child2
+
+-- end: ftd.row
+
+-- end: lp.footer
+
+-- end: lp.page
