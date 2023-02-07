@@ -1055,7 +1055,6 @@ bottom.px: 50
 -- component slider-item:
 caption title:
 body body:
-integer index:
 
 -- ftd.column:
 width: fill-container
