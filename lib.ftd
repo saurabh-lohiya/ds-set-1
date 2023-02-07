@@ -1,13 +1,19 @@
--- integer width: 1180
+-- import: typo
+-- import: cs
+-- integer $width: 1180
+-- integer $current-slide: 1
 
 -- component page:
 optional caption title:
 optional body body:
 optional ftd.color bgcolor-landing-hero:
 children page-wrap:
+ftd.type-data types: $typo.types
+ftd.color-scheme colors: $cs.main
 
 -- ftd.column:
 width: fill-container
+color: $inherited.colors.text
 background.solid: $inherited.colors.background.base
 align-content: center
 
@@ -27,14 +33,7 @@ align-self: center
 
 -- ftd.column:
 width: fill-container
-max-width.fixed.px: $width
-align-self: center
-
--- end: ftd.column
-
--- ftd.column:
-width: fill-container
-max-width.fixed.px: $width
+align-content: center
 align-self: center
 children: $page.page-wrap
 
@@ -44,6 +43,15 @@ children: $page.page-wrap
 
 -- end: page
 
+
+
+
+
+
+
+
+
+
 -- component invoice:
 ftd.color bg-color:
 children invoice-wrap:
@@ -52,13 +60,17 @@ optional integer padding-horizontal: 85
 
 -- ftd.column:
 width: fill-container
-background.solid: $invoice.bg-color
-border-radius.px: 20
-padding-vertical.px: $invoice.padding-vertical
-padding-horizontal.px: 85
+align-content: center
 margin-bottom.px: 30
 
 -- ftd.row:
+background.solid: $invoice.bg-color
+padding-vertical.px: $invoice.padding-vertical
+border-radius.px: 20
+padding-horizontal.px: 85
+width: fill-container
+max-width.fixed.px: $width
+align-self: center
 children: $invoice.invoice-wrap
 
 -- end: ftd.row
@@ -67,17 +79,27 @@ children: $invoice.invoice-wrap
 
 -- end: invoice
 
+
+
+
+
+
+
+
+
+
 -- component invoice-info:
 caption title:
 string cta-label:
 body info:
+children btn:
 
 -- ftd.column:
 width: fill-container
 align-self: center
 
 -- ftd.text: $invoice-info.title
-role: $inherited.types.heading-large
+role: $inherited.types.heading-medium
 
 -- ftd.text:
 role: $inherited.types.copy-regular
@@ -86,14 +108,23 @@ margin-bottom.px: 40
 
 $invoice-info.info
 
--- button.button: $invoice-info.cta-label
-role: primary
-large: true
-radius: 20
+-- ftd.column:
+children: $invoice-info.btn
+
+-- end: ftd.column
 
 -- end: ftd.column
 
 -- end: invoice-info
+
+
+
+
+
+
+
+
+
 
 -- component invoice-img:
 ftd.image-src src:
@@ -109,6 +140,15 @@ height: auto
 
 -- end: invoice-img
 
+
+
+
+
+
+
+
+
+
 -- component card:
 caption title:
 ftd.image-src src:
@@ -118,22 +158,22 @@ body info:
 min-height.fixed.px: 276
 max-width.fixed.px: 580
 border-width.px: 1
+border-color: $inherited.colors.custom.one
+background.solid: $inherited.colors.background.step-2
 padding-top.px: 35
 padding-horizontal.px: 40
 border-radius.px: 10
-spacing.fixed.px: 20
-
--- ftd.row:
-align-content: center 
-spacing.fixed.px: 20
 
 -- ftd.image: $card.src
+border-radius.px: 50
 
 -- ftd.text: $card.title
-
--- end: ftd.row
+margin-top.px: 24 
+role: $inherited.types.copy-regular
 
 -- ftd.text:
+margin-top.px: 8 
+role: $inherited.types.copy-small
 
 $card.info
 
@@ -141,23 +181,40 @@ $card.info
 
 -- end: card
 
+
+
+
+
+
+
+
+
 -- component card-container:
 caption title:
 string info:
 children card-wrap:
+integer $width: $width
 
 -- ftd.column:
 width: fill-container
 align-content: center
-background.solid: #fff
+background.solid: $inherited.colors.background.base
+
+-- ftd.column:
+max-width.fixed.px: $width
+width: fill-container
+align-self: center
+align-content: center
+padding-vertical.px: 55
 
 -- ftd.text: $card-container.title
 role: $inherited.types.heading-large
 
 -- ftd.text: $card-container.info
+role: $inherited.types.copy-large
 
 -- ftd.row:
-padding-vertical.px: 30
+margin-top.px: 30
 wrap: true
 spacing.fixed.px: 20
 width: fill-container
@@ -168,26 +225,44 @@ align-content: center
 
 -- end: ftd.column
 
+-- end: ftd.column
+
 -- end: card-container
+
+
+
+
+
+
+
+
+
 
 -- component generation: 
 caption title:
 body info:
+integer $width: $width
 
 -- ftd.column:
 width: fill-container
-background.solid: #fff
+background.solid: $inherited.colors.background.base
+align-content: center
 padding-top.px: 100
 padding-bottom.px: 70
 
 -- ftd.column:
-max-width.fixed.px: 840
+width: fill-container
+max-width.fixed.px: $generation.width
+align-self: center
 spacing.fixed.px: 20 
 
 -- ftd.text: $generation.title
+max-width.fixed.px: 740
 role: $inherited.types.heading-large
 
 -- ftd.text: 
+max-width.fixed.px: 840
+role: $inherited.types.copy-regular
 
 $generation.info
 
@@ -197,14 +272,30 @@ $generation.info
 
 -- end: generation
 
+
+
+
+
+
+
+
+
+
 -- component history:
 caption title:
 body info:
 ftd.image-src src:
+integer $width: $width
 
 -- ftd.column:
 width: fill-container
-background.solid: #fff
+align-content: center
+background.solid: $inherited.colors.background.base
+
+-- ftd.column:
+max-width.fixed.px: $width
+width: fill-container
+align-self: center
 padding-top.px: 115
 padding-bottom.px: 125
 align-content: center
@@ -215,8 +306,11 @@ align-content: center
 
 -- ftd.text: $history.title
 role: $inherited.types.heading-large
+color: $inherited.colors.text
 
 -- ftd.text: 
+role: $inherited.types.copy-large
+color: $inherited.colors.text
 
 $history.info
 
@@ -229,21 +323,43 @@ padding-horizontal.px: 58
 
 -- end: ftd.column
 
+-- end: ftd.column
+
 -- end: history
+
+
+
+
+
+
+
+
+
 
 -- component signup:
 caption title:
+integer $width: $width
+children btn:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+background.solid: $inherited.colors.custom.four
+
+-- ftd.row:
+max-width.fixed.px: $signup.width
+padding-vertical.px: 60
+align-self: center
 
 -- ftd.row:
 padding-vertical.px: 72
 padding-horizontal.px: 75
-background.solid: #003629
+background.solid: $inherited.colors.background.step-1
 width: fill-container
-color: #fff
-margin-bottom.px: 130
 border-radius.px: 20
 
 -- ftd.column:
+padding-right.px: 16
 width.fixed.percent: 50
 
 -- ftd.text: $signup.title
@@ -267,21 +383,35 @@ border-radius.px: 30
 width.fixed.px: 310
 
 -- ftd.text: Sign up in 2 minutes
+role: $inherited.types.label-small
 
 -- end: ftd.column
 
--- button.button: Sign me up
-role: primary
-large: true
-radius: 30
-
--- end: ftd.row
+-- ftd.column:
+children: $signup.btn
 
 -- end: ftd.column
 
 -- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: ftd.column
 
 -- end: signup
+
+
+
+
+
+
+
+
+
 
 -- component question:
 string ques:
@@ -291,7 +421,6 @@ boolean $open: false
 -- ftd.column:
 width: fill-container
 padding.px: 10
-background.solid: #fff 
 border-bottom-width.px: 1
 border-color: #bbb
 
@@ -300,7 +429,7 @@ width: fill-container
 spacing: space-between 
 
 -- ftd.text: $question.ques
-role: $inherited.types.copy-regular
+role: $inherited.types.heading-small
 $on-click$: $ftd.toggle($a = $question.open)
 
 -- ftd.text: `+`
@@ -324,7 +453,7 @@ padding-horizontal.px: 6
 -- ftd.text:
 margin-top.px: 20
 max-width.fixed.percent: 80
-role: $inherited.types.fine-print
+role: $inherited.types.copy-regular
 if: { question.open }
 
 $question.ans
@@ -333,14 +462,30 @@ $question.ans
 
 -- end: question
 
+
+
+
+
+
+
+
+
+
 -- component faq:
 caption title:
 children question-wrap:
+integer $width: $width
 
 -- ftd.column:
-padding-vertical.px: 70
-background.solid: #fff
 width: fill-container
+align-content: center
+background.solid: $inherited.colors.custom.four
+padding-vertical.px: 70
+
+-- ftd.column:
+max-width.fixed.px: $faq.width
+width: fill-container
+align-self: center
 
 -- ftd.text: $faq.title
 margin-bottom.px: 70
@@ -355,17 +500,37 @@ children: $faq.question-wrap
 
 -- end: ftd.column
 
+-- end: ftd.column
+
 -- end: faq
+
+
+
+
+
+
+
+
+
+
 
 -- component dashboard:
 children dashboard-wrap:
 ftd.image-src src:
+integer $width: $width
+
+-- ftd.column:
+width: fill-container
+align-content: center
+background.solid: $inherited.colors.accent.secondary
 
 -- ftd.row:
-background.solid: #094367
 padding-vertical.px: 170
 padding-horizontal.px: 20
 spacing.fixed.px: 125
+width: fill-container
+max-width.fixed.px: $dashboard.width
+align-self: center
 
 -- ftd.column:
 children: $dashboard.dashboard-wrap
@@ -376,13 +541,25 @@ children: $dashboard.dashboard-wrap
 
 -- end: ftd.row
 
+-- end: ftd.column
+
 -- end: dashboard
+
+
+
+
+
+
+
+
+
 
 -- component dashboard-info:
 caption title:
 string info:
 string cta-placeholder:
 string cta-label:
+children btn:
 
 -- ftd.column:
 width: fill-container
@@ -406,10 +583,10 @@ border-color: #000
 border-radius.px: 30
 padding.px: 15
 
--- button.button: Sign me up
-role: primary
-large:true
-radius: 30
+-- ftd.column:
+children: $dashboard-info.btn
+
+-- end: ftd.column
 ;; padding-vertical.px: 15
 ;; padding-horizontal.px: 30
 
@@ -419,19 +596,34 @@ radius: 30
 
 -- end: dashboard-info
 
+
+
+
+
+
+
+
+
+
 -- component navbar:
 caption brand-name:
-string cta-label1:
-string cta-label2:
+integer $width: $width
+children btn:
 
--- ftd.row:
-align-content: center
-padding.px: 40
+-- ftd.column:
 width: fill-container
 background.solid: $inherited.colors.accent.secondary
+align-content: center
+
+-- ftd.row:
+padding.px: 40
+align-self: center
+width: fill-container
+max-width.fixed.px: $navbar.width
 
 -- ftd.text: $navbar.brand-name
 role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
 
 -- ftd.row:
 width: fill-container
@@ -439,43 +631,50 @@ margin-left.px: 48
 
 -- ftd.text: page1
 role: $inherited.types.copy-regular
+color: $inherited.colors.text-strong
 
 -- ftd.text: page2
 margin-left.px: 32
 role: $inherited.types.copy-regular
+color: $inherited.colors.text-strong
 
 -- ftd.text: page3
 margin-left.px: 32
+color: $inherited.colors.text-strong
 role: $inherited.types.copy-regular
 
 -- ftd.text: page4
 margin-left.px: 32
+color: $inherited.colors.text-strong
 role: $inherited.types.copy-regular
 
 -- ftd.text: page5
 margin-left.px: 32
+color: $inherited.colors.text-strong
 role: $inherited.types.copy-regular
 
 -- end: ftd.row
 
 -- ftd.row:
 spacing.fixed.px: 24
-
--- button.button: $navbar.cta-label1
-role: primary
-large: true
-radius: 30
-
--- button.button: $navbar.cta-label2
-role: primary
-large: true
-radius: 30
+children: $navbar.btn
 
 -- end: ftd.row
 
 -- end: ftd.row
+
+-- end: ftd.column
 
 -- end: navbar
+
+
+
+
+
+
+
+
+
 
 -- component company:
 caption name: 
@@ -494,42 +693,92 @@ margin-left.px: 12
 
 -- end: company
 
+
+
+
+
+
+
+
+
+
 -- component companies:
 caption title:
 children companies-wrap:
+integer $width: $width
 
 -- ftd.column:
 width: fill-container
-background.solid: #fff
 align-content: center
+background.solid: $inherited.colors.background.base
 padding-vertical.px: 100
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $companies.width
+align-self: center
+align-content: center
 
 -- ftd.text: $companies.title
 role: $inherited.types.copy-regular
+color: $inherited.colors.text
 
 -- ftd.row:
 margin-top.px: 30
 spacing.fixed.px: 64
+width: fill-container
+align-content: center
+align-self: center
+max-width.fixed.px: $companies.width
 children: $companies.companies-wrap
 
 -- end: ftd.row
 
 -- end: ftd.column
 
+-- end: ftd.column
+
 -- end: companies
+
+
+
+
+
+
+
+
+
 
 -- component footer:
 children footer-wrap:
+integer $width: $width
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.base
+align-content: center
 
 -- ftd.row:
-background.solid: #fff
+max-width.fixed.px: $footer.width
 width: fill-container
+align-self: center
 padding-vertical.px: 100
 children: $footer.footer-wrap
 
 -- end: ftd.row
 
+-- end: ftd.column
+
 -- end: footer
+
+
+
+
+
+
+
+
+
 
 -- component footer-child1:
 caption brand-name:
@@ -545,6 +794,7 @@ ftd.image-src src5:
 min-width.fixed.px: 305
 
 -- ftd.text: $footer-child1.brand-name
+role: $inherited.types.heading-small
 margin-bottom.px: 24
 
 -- ftd.text: $footer-child1.info
@@ -572,6 +822,15 @@ role: $inherited.types.fine-print
 -- end: ftd.column
 
 -- end: footer-child1
+
+
+
+
+
+
+
+
+
 
 -- component footer-child2:
 caption title:
@@ -605,3 +864,262 @@ role: $inherited.types.copy-regular
 -- end: ftd.column
 
 -- end: footer-child2
+
+
+
+
+
+
+
+
+
+
+-- component btn:
+caption title:
+optional boolean transparent: false
+optional integer padding-vertical: 10
+optional integer padding-left: 28
+optional integer padding-right: 28
+optional integer border-width: 1
+optional integer border-radius: 30
+optional integer radius: 5
+
+-- ftd.row:
+border-radius.px: $btn.border-radius
+padding-vertical.px: $btn.padding-vertical
+padding-left.px: $btn.padding-left
+padding-right.px: $btn.padding-right
+background.solid if { !btn.transparent }: $inherited.colors.accent.primary
+border-width.px if { btn.transparent }: $btn.border-width
+
+-- ftd.text: $btn.title
+role: $inherited.types.button-large
+color: $inherited.colors.text-strong
+
+-- end: ftd.row
+
+-- end: btn
+
+
+
+
+
+
+
+
+
+-- component savings:
+children savings-wrap:
+integer $width: $width
+ftd.image-src src:
+
+-- ftd.column:
+width: fill-container
+padding-top.px: 128
+align-content: center
+
+-- ftd.row:
+width: fill-container
+max-width.fixed.px: $savings.width
+align-self: center
+
+-- ftd.column:
+align-self: center
+children: $savings.savings-wrap
+
+-- end: ftd.column
+
+-- ftd.image: $savings.src
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: savings
+
+
+
+
+
+
+
+
+
+
+-- component savings-info:
+caption title:
+string info1:
+string info2:
+string invoice-count:
+ftd.image-src src:
+
+-- ftd.column:
+align-self: center
+spacing.fixed.px: 24
+padding-left.px: 165
+padding-right.px: 110
+
+-- ftd.text: $savings-info.title
+width.fixed.percent: 90
+role: $inherited.types.heading-large
+
+-- ftd.text: $savings-info.info1
+role: $inherited.types.copy-regular
+
+-- ftd.text: $savings-info.info2
+role: $inherited.types.copy-regular
+
+-- ftd.text: $savings-info.invoice-count
+role: $inherited.types.heading-small
+
+-- ftd.image: $savings-info.src
+anchor: parent
+left.px: 0
+top.px: 330
+
+-- end: ftd.column
+
+-- end: savings-info
+
+
+
+
+
+
+
+
+
+
+-- component qoutes:
+optional ftd.image-src dbl-qoutes:
+optional ftd.image-src arrows:
+integer $width: $width
+children slider-items:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $qoutes.width
+padding-top.px: 190
+padding-bottom.px: 120
+spacing.fixed.px: 36
+align-self: center
+align-content: center
+margin-vertical.px: 100
+border-radius.px: 20
+background.solid: $inherited.colors.custom.two
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: 600
+children: $qoutes.slider-items
+
+-- end: ftd.column
+
+-- ftd.row:
+spacing.fixed.px: 10
+anchor: parent
+left.px: 36
+bottom.px: 50
+
+-- end: ftd.row
+
+-- ftd.image: $qoutes.dbl-qoutes
+anchor: parent
+left.px: 36
+top.px: 70
+
+-- ftd.image: $qoutes.arrows
+anchor: parent
+right.px: 36
+bottom.px: 50
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: qoutes
+
+
+
+
+
+
+
+
+
+
+-- component slider-item:
+caption title:
+body body:
+integer index:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.text:
+role: $inherited.types.heading-tiny
+color: $inherited.colors.text
+
+$slider-item.body
+
+-- ftd.text: $slider-item.title
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- end: ftd.column
+
+-- end: slider-item
+
+
+
+
+
+
+
+
+
+
+-- component slider-nav:
+integer index: 1
+boolean $active: false
+
+-- ftd.column:
+width.fixed.px: 13
+height.fixed.px: 13
+border-radius.px: 10
+border-width.px: 1
+$on-click$: $ftd.toggle($a = $slider-nav.active)
+$on-click$: $ftd.set-integer($a = $current-slide, v = $slider-nav.index)
+background.solid if { slider-nav.active }: $inherited.colors.custom.one
+
+-- end: ftd.column
+
+-- end: slider-nav
+
+
+
+
+
+
+
+
+
+
+-- component slider-wrapper:
+optional integer index:
+optional integer reset:
+children slide:
+
+-- ftd.column:
+if : { slider-wrapper.index == slider-wrapper.reset }
+width: fill-container
+align-content: center
+children: $slider-wrapper.slide
+
+-- end: ftd.column
+
+-- end: slider-wrapper

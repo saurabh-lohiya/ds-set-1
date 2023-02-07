@@ -3,5 +3,5 @@
 -- fastn.package: fifthtry.github.io/ds-set-2
 download-base-url: https://raw.githubusercontent.com/fifthtry/ds-set-2/main
 
--- fastn.dependency: fifthtry.github.io/button as button
--- fastn.auto-import: button
+-- fastn.dependency: fifthtry.github.io/ds-set1-typography as typo
+-- fastn.dependency: fifthtry.github.io/ds-set1-cs as cs

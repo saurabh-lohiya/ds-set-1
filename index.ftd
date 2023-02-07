@@ -1,14 +1,20 @@
 -- import: fifthtry.github.io/ds-set-2/lib as lp
 -- import: fifthtry.github.io/ds-set-2/assets
 
+-- lp.page:
 
 -- lp.navbar: Fastn
-cta-label1: Login
-cta-label2: Signup
+
+-- lp.btn: Login
+transparent: true
+
+-- end: lp.btn
+
+-- lp.btn: Signup
+
+-- end: lp.btn
 
 -- end: lp.navbar
-
--- lp.page:
 
 -- lp.dashboard:
 src: $assets.files.assets.dashboard.png
@@ -17,6 +23,12 @@ src: $assets.files.assets.dashboard.png
 info: Pay and get paid in real-time with zero fees. Secure, streamlined, and super fast.
 cta-placeholder: Enter Your Work Email
 cta-label: Sign me up
+
+-- lp.btn: Sign me up
+padding-left: 24
+padding-right: 24
+
+-- end: lp.btn
 
 -- end: lp.dashboard-info
 
@@ -55,6 +67,8 @@ src: $assets.files.assets.welytics.svg
 
 Hopscotch is an all-in-one payments platform where businesses can connect, transact, and grow together.
 
+-- end: lp.generation
+
 -- lp.invoice:
 bg-color: $inherited.colors.custom.four
 
@@ -63,8 +77,16 @@ cta-label: Sign me up
 
 Pay and get paid like never before. Auto-generate invoices, send reminders, schedule payments, and instantly access money when someone pays you.
 
+-- lp.btn: Sign me up
+
+-- end: lp.btn
+
+-- end: lp.invoice-info
+
 -- lp.invoice-img:
-src: $assets.files.assets.invoicing.svg
+src: $assets.files.assets.invoicing.png
+
+-- end: lp.invoice-img
 
 -- end: lp.invoice
 
@@ -72,25 +94,41 @@ src: $assets.files.assets.invoicing.svg
 bg-color: $inherited.colors.custom.two
 
 -- lp.invoice-img:
-src: $assets.files.assets.cash_control.svg
+src: $assets.files.assets.cash_control.png
+
+-- end: lp.invoice-img
 
 -- lp.invoice-info: Easy payments and invoicing
 cta-label: Sign me up
 
 Pay and get paid like never before. Auto-generate invoices, send reminders, schedule payments, and instantly access money when someone pays you.
 
+-- lp.btn: Sign me up
+
+-- end: lp.btn
+
+-- end: lp.invoice-info
+
 -- end: lp.invoice
 
 -- lp.invoice:
-bg-color: $inherited.colors.custom.three
+bg-color: $inherited.colors.custom.four
 
 -- lp.invoice-info: Easy payments  and invoicing
 cta-label: Sign me up
 
 Pay and get paid like never before. Auto-generate invoices, send reminders, schedule payments, and instantly access money when someone pays you.
 
+-- lp.btn: Sign me up
+
+-- end: lp.btn
+
+-- end: lp.invoice-info
+
 -- lp.invoice-img:
-src: $assets.files.assets.smart_dashboard.svg
+src: $assets.files.assets.smart_dashboard.png
+
+-- end: lp.invoice-img
 
 -- end: lp.invoice
 
@@ -100,6 +138,61 @@ src: $assets.files.assets.history.svg
 Easily manage what’s coming in and going out.
 
 -- end: lp.history
+
+-- lp.savings:
+src: $assets.files.assets.savings.svg
+$width: 1440
+
+-- lp.savings-info: See how much faster you can get paid with Fastn
+info1: Use our calculator to see how many days we can free up in cash flow for your business.
+info2: How many invoices do you send each month?
+invoice-count: 50
+src: $assets.files.assets.arrow.svg
+
+-- end: lp.savings-info
+
+-- end: lp.savings
+
+-- lp.qoutes: —Jonathan S., Co Founder & COO
+dbl-qoutes: $assets.files.assets.dbl-qoutes.svg
+arrows: $assets.files.assets.arrows.png
+
+Fastnis easier, more intuitive, and faster than what’s currently out there. It’s a no brainer.
+
+-- end: lp.qoutes
+
+-- lp.card-container: Why Fastn?
+info: We’re putting your other payments platform in timeout.
+
+-- lp.card: Secure
+src: $assets.files.assets.secure.svg
+
+Hopscotch transactions are protected by the latest encryption and security technology. We also leverage Plaid to keep businesses in our database safe.
+
+-- end: lp.card
+
+-- lp.card: Secure
+src: $assets.files.assets.secure.svg
+
+Hopscotch transactions are protected by the latest encryption and security technology. We also leverage Plaid to keep businesses in our database safe.
+
+-- end: lp.card
+
+-- lp.card: Secure
+src: $assets.files.assets.secure.svg
+
+Hopscotch transactions are protected by the latest encryption and security technology. We also leverage Plaid to keep businesses in our database safe.
+
+-- end: lp.card
+
+-- lp.card: Secure
+src: $assets.files.assets.secure.svg
+
+Hopscotch transactions are protected by the latest encryption and security technology. We also leverage Plaid to keep businesses in our database safe.
+
+-- end: lp.card
+
+-- end: lp.card-container
 
 -- lp.faq: Frequently Answered Questions
 
@@ -148,34 +241,11 @@ ans: At Hopscotch, we believe businesses shouldn’t have to wait or pay to acce
 
 -- end: lp.faq
 
--- lp.card-container: Why Hopscotch?
-info: We’re putting your other payments platform in timeout.
-
--- lp.card: Secure
-src: $assets.files.assets.secure.svg
-
-Hopscotch transactions are protected by the latest encryption and security technology. We also leverage Plaid to keep businesses in our database safe.
-
--- lp.card: Secure
-src: $assets.files.assets.secure.svg
-
-Hopscotch transactions are protected by the latest encryption and security technology. We also leverage Plaid to keep businesses in our database safe.
-
--- lp.card: Secure
-src: $assets.files.assets.secure.svg
-
-Hopscotch transactions are protected by the latest encryption and security technology. We also leverage Plaid to keep businesses in our database safe.
-
--- lp.card: Secure
-src: $assets.files.assets.secure.svg
-
-Hopscotch transactions are protected by the latest encryption and security technology. We also leverage Plaid to keep businesses in our database safe.
-
--- end: lp.card
-
--- end: lp.card-container
-
 -- lp.signup: Freakishly simple. Downright useful. Ready to make the jump?
+
+-- lp.btn: Sign me up
+
+-- end: lp.btn
 
 -- end: lp.signup
 
