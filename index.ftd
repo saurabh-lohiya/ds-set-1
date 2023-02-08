@@ -16,52 +16,16 @@ transparent: true
 
 -- end: lp.navbar
 
--- lp.dashboard:
-src: $assets.files.assets.dashboard.png
-
--- lp.dashboard-info: Instant, fee-free payments for small business.
+-- lp.dashboard: Instant, fee-free payments for small business.
 info: Pay and get paid in real-time with zero fees. Secure, streamlined, and super fast.
 cta-placeholder: Enter Your Work Email
 cta-label: Sign me up
-
--- lp.btn: Sign me up
-padding-left: 24
-padding-right: 24
-
--- end: lp.btn
-
--- end: lp.dashboard-info
+src: $assets.files.assets.dashboard.png
 
 -- end: lp.dashboard
 
 -- lp.companies: Trusted by the top companies in this industry
-
--- lp.company: Jiggle
-src: $assets.files.assets.jiggle.svg
-
--- end: lp.company
-
--- lp.company: Symtric
-src: $assets.files.assets.symtric.svg
-
--- end: lp.company
-
--- lp.company: Wishelp
-src: $assets.files.assets.wishelp.svg
-
--- end: lp.company
-
--- lp.company: resecurb
-src: $assets.files.assets.resecurb.svg
-
--- end: lp.company
-
--- lp.company: WELYTICS
-src: $assets.files.assets.welytics.svg
-
--- end: lp.company
-
--- end: lp.companies
+clients: $clients
 
 -- lp.generation: Built for the next generation of small business
 
@@ -69,68 +33,33 @@ Hopscotch is an all-in-one payments platform where businesses can connect, trans
 
 -- end: lp.generation
 
--- lp.invoice:
-bg-color: $inherited.colors.custom.four
-
--- lp.invoice-info: Easy payments  and invoicing
+-- lp.promo-banner: Easy payments  and invoicing
 cta-label: Sign me up
-
-Pay and get paid like never before. Auto-generate invoices, send reminders, schedule payments, and instantly access money when someone pays you.
-
--- lp.btn: Sign me up
-
--- end: lp.btn
-
--- end: lp.invoice-info
-
--- lp.invoice-img:
+bg-color: $inherited.colors.custom.four
 src: $assets.files.assets.invoicing.png
 
--- end: lp.invoice-img
+Pay and get paid like never before. Auto-generate promo-banners, send reminders, schedule payments, and instantly access money when someone pays you.
 
--- end: lp.invoice
+-- end: lp.promo-banner
 
--- lp.invoice:
-bg-color: $inherited.colors.custom.two
-
--- lp.invoice-img:
+-- lp.promo-banner: Better cash control with our flow
+img-order-left: true
+cta-label: Sign me up
+bg-color: $inherited.colors.custom.four
 src: $assets.files.assets.cash_control.png
 
--- end: lp.invoice-img
+Can’t wait to get paid? Fastn Flow helps you avoid gaps in cash flow, stay flexible, and grow your business on your terms.
 
--- lp.invoice-info: Easy payments and invoicing
+-- end: lp.promo-banner
+
+-- lp.promo-banner: Smart dashboard, powerful integrations
 cta-label: Sign me up
-
-Pay and get paid like never before. Auto-generate invoices, send reminders, schedule payments, and instantly access money when someone pays you.
-
--- lp.btn: Sign me up
-
--- end: lp.btn
-
--- end: lp.invoice-info
-
--- end: lp.invoice
-
--- lp.invoice:
 bg-color: $inherited.colors.custom.four
-
--- lp.invoice-info: Easy payments  and invoicing
-cta-label: Sign me up
-
-Pay and get paid like never before. Auto-generate invoices, send reminders, schedule payments, and instantly access money when someone pays you.
-
--- lp.btn: Sign me up
-
--- end: lp.btn
-
--- end: lp.invoice-info
-
--- lp.invoice-img:
 src: $assets.files.assets.smart_dashboard.png
 
--- end: lp.invoice-img
+Our dashboard is simple to navigate and packed with useful features. It also integrates seamlessly with accounting platforms like Quickbooks.
 
--- end: lp.invoice
+-- end: lp.promo-banner
 
 -- lp.history: Headaches are history
 src: $assets.files.assets.history.svg
@@ -139,113 +68,29 @@ Easily manage what’s coming in and going out.
 
 -- end: lp.history
 
--- lp.savings:
-src: $assets.files.assets.savings.svg
-$width: 1440
-
--- lp.savings-info: See how much faster you can get paid with Fastn
+-- lp.savings: See how much faster you can get paid with Fastn
 info1: Use our calculator to see how many days we can free up in cash flow for your business.
-info2: How many invoices do you send each month?
-invoice-count: 50
-src: $assets.files.assets.arrow.svg
-
--- end: lp.savings-info
+info2: How many promo-banners do you send each month?
+promo-banner-count: 50
+src1: $assets.files.assets.arrow.svg
+src2: $assets.files.assets.savings.svg
+$width: 1440
 
 -- end: lp.savings
 
--- lp.qoutes: —Jonathan S., Co Founder & COO
-dbl-qoutes: $assets.files.assets.dbl-qoutes.svg
-arrows: $assets.files.assets.arrows.png
-
-Fastnis easier, more intuitive, and faster than what’s currently out there. It’s a no brainer.
-
--- end: lp.qoutes
-
 -- lp.card-container: Why Fastn?
 info: We’re putting your other payments platform in timeout.
-
--- lp.card: Secure
-src: $assets.files.assets.secure.svg
-
-Hopscotch transactions are protected by the latest encryption and security technology. We also leverage Plaid to keep businesses in our database safe.
-
--- end: lp.card
-
--- lp.card: Secure
-src: $assets.files.assets.secure.svg
-
-Hopscotch transactions are protected by the latest encryption and security technology. We also leverage Plaid to keep businesses in our database safe.
-
--- end: lp.card
-
--- lp.card: Secure
-src: $assets.files.assets.secure.svg
-
-Hopscotch transactions are protected by the latest encryption and security technology. We also leverage Plaid to keep businesses in our database safe.
-
--- end: lp.card
-
--- lp.card: Secure
-src: $assets.files.assets.secure.svg
-
-Hopscotch transactions are protected by the latest encryption and security technology. We also leverage Plaid to keep businesses in our database safe.
-
--- end: lp.card
+cards: $cards
 
 -- end: lp.card-container
 
 -- lp.faq: Frequently Answered Questions
-
--- lp.question:
-$open: true
-ques: Are there really zero fees?
-ans: At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
-
--- end: lp.question
-
--- lp.question:
-ques: Are there really zero fees?
-ans: At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
-
--- end: lp.question
-
--- lp.question:
-ques: Are there really zero fees?
-ans: At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
-
--- end: lp.question
-
--- lp.question:
-ques: Are there really zero fees?
-ans: At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
-
--- end: lp.question
-
--- lp.question:
-ques: Are there really zero fees?
-ans: At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
-
--- end: lp.question
-
--- lp.question:
-ques: Are there really zero fees?
-ans: At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
-
--- end: lp.question
-
--- lp.question:
-ques: Are there really zero fees?
-ans: At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
-
--- end: lp.question
-
--- end: lp.faq
+questions: $questions
 
 -- lp.signup: Freakishly simple. Downright useful. Ready to make the jump?
-
--- lp.btn: Sign me up
-
--- end: lp.btn
+cta-placeholder: Enter your work email...
+cta-label: Sign me up
+info: Sign up in 2 minutes
 
 -- end: lp.signup
 
@@ -264,33 +109,32 @@ src5: $assets.files.assets.ball.svg
 
 -- ftd.row:
 width: fill-container
-margin-left.px: 87
-spacing: space-between
+spacing: space-around
 
 -- lp.footer-child2: Heading2
-link1: Footer Link1
-link2: Footer Link2
-link3: Footer Link3
-link4: Footer Link4
-link5: Footer Link5
+link1: Footer link 1
+link2: Footer link 2
+link3: Footer link 3
+link4: Footer link 4
+link5: Footer link 5
 
 -- end: lp.footer-child2
 
 -- lp.footer-child2: Heading3
-link1: Footer Link1
-link2: Footer Link2
-link3: Footer Link3
-link4: Footer Link4
-link5: Footer Link5
+link1: Footer link 1
+link2: Footer link 2
+link3: Footer link 3
+link4: Footer link 4
+link5: Footer link 5
 
 -- end: lp.footer-child2
 
 -- lp.footer-child2: Heading4
-link1: Footer Link1
-link2: Footer Link2
-link3: Footer Link3
-link4: Footer Link4
-link5: Footer Link5
+link1: Footer link 1
+link2: Footer link 2
+link3: Footer link 3
+link4: Footer link 4
+link5: Footer link 5
 
 -- end: lp.footer-child2
 
@@ -299,3 +143,91 @@ link5: Footer Link5
 -- end: lp.footer
 
 -- end: lp.page
+
+
+
+
+-- $lp.client list clients:
+
+-- $lp.client: Jiggle
+src: $assets.files.assets.jiggle.svg
+
+-- $lp.client: Symtric
+src: $assets.files.assets.symtric.svg
+
+-- $lp.client: Wishelp
+src: $assets.files.assets.wishelp.svg
+
+-- $lp.client: Resecurb
+src: $assets.files.assets.resecurb.svg
+
+-- $lp.client: Welytics
+src: $assets.files.assets.welytics.svg
+
+-- end: clients
+
+
+
+
+
+
+
+-- $lp.que list questions:
+
+-- $lp.que: Are there really zero fees?
+
+At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
+
+-- $lp.que: Are there really zero fees?
+
+At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
+
+-- $lp.que: Are there really zero fees?
+
+At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
+
+-- $lp.que: Are there really zero fees?
+
+At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
+
+-- $lp.que: Are there really zero fees?
+
+At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
+
+-- $lp.que: Are there really zero fees?
+
+At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
+
+-- $lp.que: Are there really zero fees?
+
+At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
+
+-- end: questions
+
+
+
+
+
+-- $lp.card-info list cards:
+
+-- $lp.card-info: Are there really zero fees?
+src: $assets.files.assets.secure.svg
+
+We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
+
+-- $lp.card-info: Are there really zero fees?
+src: $assets.files.assets.secure.svg
+
+We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
+
+-- $lp.card-info: Are there really zero fees?
+src: $assets.files.assets.secure.svg
+
+We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
+
+-- $lp.card-info: Are there really zero fees?
+src: $assets.files.assets.secure.svg
+
+We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
+
+-- end: cards
