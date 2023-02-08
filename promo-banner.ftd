@@ -1,0 +1,124 @@
+-- import: fifthtry.github.io/ds-set-2/assets
+
+-- component promo-banner:
+caption title:
+string cta-label:
+body info:
+ftd.color bg-color:
+ftd.image-src src:
+children promo-banner-wrap:
+optional integer padding-vertical: 50
+optional integer padding-horizontal: 85
+boolean img-order-left: false
+
+-- ftd.column:
+width: fill-container
+align-content: center
+margin-bottom.px: 30
+
+-- ftd.row:
+if: { promo-banner.img-order-left }
+background.solid: $promo-banner.bg-color
+padding-vertical.px: $promo-banner.padding-vertical
+border-radius.px: 20
+padding-horizontal.px: 85
+width: fill-container
+max-width.fixed.px: $width
+align-self: center
+
+-- promo-banner-img:
+src: $promo-banner.src
+
+-- promo-banner-info: $promo-banner.title
+cta-label: $promo-banner.cta-label
+info: $promo-banner.info
+
+-- end: promo-banner-info
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { !promo-banner.img-order-left }
+background.solid: $promo-banner.bg-color
+padding-vertical.px: $promo-banner.padding-vertical
+border-radius.px: 20
+padding-horizontal.px: 85
+width: fill-container
+max-width.fixed.px: $width
+align-self: center
+
+-- promo-banner-info: $promo-banner.title
+cta-label: $promo-banner.cta-label
+info: $promo-banner.info
+
+-- end: promo-banner-info
+
+-- promo-banner-img:
+src: $promo-banner.src
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: promo-banner
+
+
+
+
+
+
+
+
+
+
+-- component promo-banner-info:
+caption title:
+string cta-label:
+body info:
+children btn:
+
+-- ftd.column:
+width: fill-container
+align-self: center
+
+-- ftd.text: $promo-banner-info.title
+role: $inherited.types.heading-medium
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+margin-top.px: 32
+margin-bottom.px: 40
+
+$promo-banner-info.info
+
+-- ftd.column:
+children: $promo-banner-info.btn
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: promo-banner-info
+
+
+
+
+
+
+
+
+
+
+-- component promo-banner-img:
+ftd.image-src src:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.image: $promo-banner-img.src
+width: auto
+height: auto
+
+-- end: ftd.column
+
+-- end: promo-banner-img
