@@ -934,6 +934,17 @@ role: $inherited.types.copy-regular
 
 
 
+-- component footer-wrapper:
+children footer-child:
+
+-- ftd.row:
+spacing: space-around
+width: fill-container
+children: $footer-wrapper.footer-child
+
+-- end: ftd.row
+
+-- end: footer-wrapper
 
 -- component btn:
 caption title:

@@ -107,9 +107,7 @@ src5: $assets.files.assets.ball.svg
 
 -- end: lp.footer-child1
 
--- ftd.row:
-width: fill-container
-spacing: space-around
+-- lp.footer-wrapper:
 
 -- lp.footer-child2: Heading2
 link1: Footer link 1
@@ -138,7 +136,7 @@ link5: Footer link 5
 
 -- end: lp.footer-child2
 
--- end: ftd.row
+-- end: lp.footer-wrapper
 
 -- end: lp.footer
 
