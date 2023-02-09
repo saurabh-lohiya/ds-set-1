@@ -1221,9 +1221,6 @@ string parent-id:
 
 -- ftd.column:
 anchor.id: $slider-nav-wrapper.parent-id
-
--- ftd.column:
-anchor: parent
 bottom.px: 40
 left.px: 36
 
@@ -1232,8 +1229,6 @@ spacing.fixed.px: 10
 children: $slider-nav-wrapper.slider-nav
 
 -- end: ftd.row
-
--- end: ftd.column
 
 -- end: ftd.column
 
