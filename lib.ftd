@@ -2,7 +2,7 @@
 -- import: cs
 -- integer $width: 1180
 -- integer $current-slide: 1
--- import: fifthtry.github.io/ds-set-2/assets
+-- import: fifthtry.github.io/ds-set-1/assets
 
 -- component page:
 optional caption title:
