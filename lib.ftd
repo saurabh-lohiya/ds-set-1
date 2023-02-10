@@ -18,6 +18,8 @@ color: $inherited.colors.text
 background.solid: $inherited.colors.background.base
 align-content: center
 
+-- dark-mode-switcher-float:
+
 -- ftd.column:
 width: fill-container
 max-width.fixed.px: $width
@@ -669,7 +671,7 @@ children btn:
 
 -- ftd.column:
 width: fill-container
-background.solid: $inherited.colors.accent.secondary
+background.solid: $inherited.colors.background.step-1
 align-content: center
 
 -- ftd.row:
@@ -1260,3 +1262,63 @@ body body:
 caption title:
 body body:
 ftd.image-src src:
+
+
+
+
+
+
+
+
+
+
+-- component dark-mode-switcher-float:
+
+-- ftd.row:
+anchor: window
+right.px: 50
+bottom.px: 50
+padding.px: 10
+background.solid: $inherited.colors.background.base
+border-width.px: 1
+border-color: $inherited.colors.border
+border-radius.px: 4
+z-index: 99999999999999
+
+-- ftd.row:
+if: { ftd.follow-system-dark-mode }
+$on-click$: $ftd.enable-light-mode()
+
+-- ftd.image:
+src: https://raw.githubusercontent.com/FifthTry/dark-mode-switcher/main/static/system-mode-active-dark.png
+height.fixed.px: 18
+align-self: center
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { !ftd.dark-mode && !ftd.follow-system-dark-mode }
+$on-click$: $ftd.enable-dark-mode()
+
+-- ftd.image:
+src: https://raw.githubusercontent.com/FifthTry/dark-mode-switcher/main/static/light-mode-active-dark.png
+height.fixed.px: 18
+align-self: center
+
+-- end: ftd.row
+
+
+-- ftd.row:
+if: { ftd.dark-mode && !ftd.follow-system-dark-mode }
+$on-click$: $ftd.enable-system-mode()
+
+-- ftd.image:
+src: https://raw.githubusercontent.com/FifthTry/dark-mode-switcher/main/static/dark-mode-active-dark.png
+height.fixed.px: 18
+align-self: center
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: dark-mode-switcher-float
