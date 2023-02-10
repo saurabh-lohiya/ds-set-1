@@ -1,0 +1,29 @@
+
+
+-- ftd.row:
+width.fixed.px: 740
+height.fixed.px: 450
+border-top-left-radius.px: 150
+border-width.px: 1
+background.solid: $inherited.colors.custom.five
+
+-- end: ftd.row
+
+-- ftd.column:
+
+-- ftd.column:
+spacing.fixed.px: 8
+
+-- ftd.text: Your 
+
+-- end: ftd.column
+
+-- ftd.column:
+
+-- end: ftd.column
+
+-- ftd.column:
+
+-- end: ftd.column
+
+-- end: ftd.column

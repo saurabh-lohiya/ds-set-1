@@ -1,10 +1,11 @@
--- import: fifthtry.github.io/ds-set-2/lib as lp
--- import: fifthtry.github.io/ds-set-2/assets
+-- import: fifthtry.github.io/ds-set-1/lib as lp
+-- import: fifthtry.github.io/ds-set-1/assets
 -- $lp.current-slide: 1
 
 -- lp.page:
 
--- lp.navbar: Fastn
+-- lp.header: Fastn
+$width: 1440
 
 -- lp.btn: Login
 transparent: true
@@ -15,7 +16,7 @@ transparent: true
 
 -- end: lp.btn
 
--- end: lp.navbar
+-- end: lp.header
 
 -- lp.dashboard: Instant, fee-free payments for small business.
 info: Pay and get paid in real-time with zero fees. Secure, streamlined, and super fast.
@@ -100,9 +101,9 @@ Fastnis easier, more intuitive, and faster than what’s currently out there. It
 index: 2
 reset: $lp.current-slide
 
--- lp.slider-item: —Jonathan S., Co Founder & COO2
+-- lp.slider-item: —Dalai Lama
 
-Fastnis easier, more intuitive, and faster than what’s currently out there. It’s a no brainer.
+The purpose of our lives is to be happy.
 
 -- end: lp.slider-item
 
@@ -112,9 +113,9 @@ Fastnis easier, more intuitive, and faster than what’s currently out there. It
 index: 3
 reset: $lp.current-slide
 
--- lp.slider-item: —Jonathan S., Co Founder & COO3
+-- lp.slider-item: —Stephen King
 
-Fastnis easier, more intuitive, and faster than what’s currently out there. It’s a no brainer.
+Get busy living or get busy dying.
 
 -- end: lp.slider-item
 
@@ -150,6 +151,7 @@ questions: $questions
 cta-placeholder: Enter your work email...
 cta-label: Sign me up
 info: Sign up in 2 minutes
+src: $assets.files.assets.okay.svg
 
 -- end: lp.signup
 
@@ -231,31 +233,38 @@ src: $assets.files.assets.welytics.svg
 
 -- $lp.que list questions:
 
--- $lp.que: Are there really zero fees?
+-- $lp.que: Are there really zero fees? 
+src: $assets.files.assets.down.svg
 
 At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
 
 -- $lp.que: Are there really zero fees?
+src: $assets.files.assets.down.svg
 
 At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
 
 -- $lp.que: Are there really zero fees?
+src: $assets.files.assets.down.svg
 
 At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
 
 -- $lp.que: Are there really zero fees?
+src: $assets.files.assets.down.svg
 
 At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
 
 -- $lp.que: Are there really zero fees?
+src: $assets.files.assets.down.svg
 
 At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
 
 -- $lp.que: Are there really zero fees?
+src: $assets.files.assets.down.svg
 
 At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
 
 -- $lp.que: Are there really zero fees?
+src: $assets.files.assets.down.svg
 
 At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
 
