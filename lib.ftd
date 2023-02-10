@@ -1,8 +1,28 @@
 -- import: typo
 -- import: cs
+-- import: fastn/processors as pr
+
+
+
+
+-- pr.sitemap-data sitemap:
+$processor$: pr.full-sitemap
+
+
+
+
 -- integer $width: 1180
 -- integer $current-slide: 1
--- import: fifthtry.github.io/ds-set-2/assets
+-- import: fifthtry.github.io/ds-set-1/assets
+
+
+
+
+
+
+
+
+
 
 -- component page:
 optional caption title:
@@ -11,12 +31,16 @@ optional ftd.color bgcolor-landing-hero:
 children page-wrap:
 ftd.type-data types: $typo.types
 ftd.color-scheme colors: $cs.main
+pr.toc-item list sections: $sitemap.sections
+
 
 -- ftd.column:
 width: fill-container
 color: $inherited.colors.text
 background.solid: $inherited.colors.background.base
 align-content: center
+
+-- dark-mode-switcher-float:
 
 -- ftd.column:
 width: fill-container
@@ -666,10 +690,12 @@ padding.px: 15
 caption brand-name:
 integer $width: $width
 children btn:
+pr.toc-item list sections: $sitemap.sections
+
 
 -- ftd.column:
 width: fill-container
-background.solid: $inherited.colors.accent.secondary
+background.solid: $inherited.colors.background.step-1
 align-content: center
 
 -- ftd.row:
@@ -681,40 +707,24 @@ max-width.fixed.px: $navbar.width
 -- ftd.text: $navbar.brand-name
 role: $inherited.types.heading-small
 color: $inherited.colors.text-strong
+align-self: center
 
 -- ftd.row:
 width: fill-container
 margin-left.px: 48
+spacing.fixed.px: 32
+align-self: center
 
--- ftd.text: page1
-role: $inherited.types.copy-regular
-color: $inherited.colors.text-strong
-
--- ftd.text: page2
-margin-left.px: 32
-role: $inherited.types.copy-regular
-color: $inherited.colors.text-strong
-
--- ftd.text: page3
-margin-left.px: 32
-color: $inherited.colors.text-strong
-role: $inherited.types.copy-regular
-
--- ftd.text: page4
-margin-left.px: 32
-color: $inherited.colors.text-strong
-role: $inherited.types.copy-regular
-
--- ftd.text: page5
-margin-left.px: 32
-color: $inherited.colors.text-strong
-role: $inherited.types.copy-regular
+-- header-links:
+$loop$: $navbar.sections as $obj
+sections: $obj
 
 -- end: ftd.row
 
 -- ftd.row:
 spacing.fixed.px: 24
 children: $navbar.btn
+align-self: center
 
 -- end: ftd.row
 
@@ -726,6 +736,24 @@ children: $navbar.btn
 
 
 
+
+
+
+
+-- component header-links:
+pr.toc-item sections:
+
+-- ftd.column:
+
+-- ftd.text: $header-links.sections.title
+role: $inherited.types.copy-regular
+color: $inherited.colors.text-strong
+color if { header-links.sections.is-active }: $inherited.colors.text-strong
+link: $header-links.sections.url
+
+-- end: ftd.column
+
+-- end: header-links
 
 
 
@@ -1260,3 +1288,63 @@ body body:
 caption title:
 body body:
 ftd.image-src src:
+
+
+
+
+
+
+
+
+
+
+-- component dark-mode-switcher-float:
+
+-- ftd.row:
+anchor: window
+right.px: 50
+bottom.px: 50
+padding.px: 10
+background.solid: $inherited.colors.background.base
+border-width.px: 1
+border-color: $inherited.colors.border
+border-radius.px: 4
+z-index: 99999999999999
+
+-- ftd.row:
+if: { ftd.follow-system-dark-mode }
+$on-click$: $ftd.enable-light-mode()
+
+-- ftd.image:
+src: https://raw.githubusercontent.com/FifthTry/dark-mode-switcher/main/static/system-mode-active-dark.png
+height.fixed.px: 18
+align-self: center
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { !ftd.dark-mode && !ftd.follow-system-dark-mode }
+$on-click$: $ftd.enable-dark-mode()
+
+-- ftd.image:
+src: https://raw.githubusercontent.com/FifthTry/dark-mode-switcher/main/static/light-mode-active-dark.png
+height.fixed.px: 18
+align-self: center
+
+-- end: ftd.row
+
+
+-- ftd.row:
+if: { ftd.dark-mode && !ftd.follow-system-dark-mode }
+$on-click$: $ftd.enable-system-mode()
+
+-- ftd.image:
+src: https://raw.githubusercontent.com/FifthTry/dark-mode-switcher/main/static/dark-mode-active-dark.png
+height.fixed.px: 18
+align-self: center
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: dark-mode-switcher-float
