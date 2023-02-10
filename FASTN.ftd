@@ -5,3 +5,18 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/ds-set-1/main
 
 -- fastn.dependency: fifthtry.github.io/ds-set1-typography as typo
 -- fastn.dependency: fifthtry.github.io/ds-set1-cs as cs
+
+
+
+-- fastn.sitemap:
+
+
+# Label: index.html
+
+# Label: /label1/
+
+# Label: /label2/
+
+# Label: /label3/
+
+# Label: /label4/
