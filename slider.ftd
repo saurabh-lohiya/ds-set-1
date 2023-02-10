@@ -1,5 +1,5 @@
--- import: fifthtry.github.io/ds-set-2/lib as lp
--- import: fifthtry.github.io/ds-set-2/assets
+-- import: fifthtry.github.io/ds-set-1/lib as lp
+-- import: fifthtry.github.io/ds-set-1/assets
 
 -- $lp.current-slide: 1
 
