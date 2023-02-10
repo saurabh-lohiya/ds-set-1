@@ -159,11 +159,13 @@ width: fill-container
 align-self: center
 
 -- ftd.text: $promo-banner-info.title
+color: $inherited.colors.text
 role: $inherited.types.heading-medium
 max-width.fixed.percent: 75
 
 -- ftd.text:
 role: $inherited.types.copy-regular
+color: $inherited.colors.text
 margin-top.px: 32
 margin-bottom.px: 40
 max-width.fixed.percent: 85
@@ -331,9 +333,11 @@ spacing.fixed.px: 20
 -- ftd.text: $generation.title
 max-width.fixed.px: 740
 role: $inherited.types.heading-large
+color: $inherited.colors.text
 
 -- ftd.text: 
 max-width.fixed.px: 840
+color: $inherited.colors.text
 role: $inherited.types.copy-regular
 
 $generation.info
@@ -414,6 +418,7 @@ integer $width: $width
 string cta-label:
 string info:
 string cta-placeholder:
+ftd.image-src src:
 
 -- ftd.column:
 width: fill-container
@@ -438,6 +443,7 @@ width.fixed.percent: 50
 
 -- ftd.text: $signup.title
 role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
 
 -- end: ftd.column
 
@@ -456,8 +462,18 @@ padding-horizontal.px: 15
 border-radius.px: 30
 width.fixed.px: 310
 
+-- ftd.row: 
+spacing.fixed.px: 10
+align-content: center
+
+-- ftd.image: 
+src: $signup.src
+
 -- ftd.text: $signup.info
 role: $inherited.types.label-small
+color: $inherited.colors.text-strong
+
+-- end: ftd.row
 
 -- end: ftd.column
 
@@ -488,36 +504,24 @@ role: $inherited.types.label-small
 caption title:
 body body:
 boolean $open: false
+ftd.image-src src:
 
 -- ftd.column:
 width: fill-container
-padding.px: 10
+padding-vertical.px: 24
 border-bottom-width.px: 1
-border-color: #bbb
+border-color: $inherited.colors.border
 
 -- ftd.row:
 width: fill-container
-spacing: space-between 
+spacing: space-between
 
 -- ftd.text: $question.title
 role: $inherited.types.heading-small
 $on-click$: $ftd.toggle($a = $question.open)
 
--- ftd.text: `+`
-if: { question.open }
-border-radius.px: 15
-background.solid: yellow
-border-width.px: 1
-padding-vertical.px: 1
-padding-horizontal.px: 6
-
--- ftd.text: `-`
-if: { !question.open }
-border-radius.px: 15
-background.solid: yellow
-border-width.px: 1
-padding-vertical.px: 1
-padding-horizontal.px: 6
+-- ftd.image:
+src: $question.src
 
 -- end: ftd.row
 
@@ -568,6 +572,7 @@ width: fill-container
 
 -- question: $question.title
 $loop$: $faq.questions as $question
+src: $question.src
 body: $question.body
 
 -- end: ftd.column
@@ -646,9 +651,11 @@ width: fill-container
 
 -- ftd.text: $dashboard-info.title
 role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
 
 -- ftd.text: $dashboard-info.info
 margin-top.px: 24
+color: $inherited.colors.text-strong
 role: $inherited.types.copy-regular
 
 -- ftd.row:
@@ -659,7 +666,8 @@ margin-right.px: 8
 min-width.fixed.px: 240
 placeholder: $dashboard-info.cta-placeholder
 background.solid: transparent
-border-color: #000
+border-color: $inherited.colors.background.base
+border-width.px: 1 
 border-radius.px: 30
 padding.px: 15
 
@@ -686,7 +694,7 @@ padding.px: 15
 
 
 
--- component navbar:
+-- component header:
 caption brand-name:
 integer $width: $width
 children btn:
@@ -702,9 +710,9 @@ align-content: center
 padding.px: 40
 align-self: center
 width: fill-container
-max-width.fixed.px: $navbar.width
+max-width.fixed.px: $header.width
 
--- ftd.text: $navbar.brand-name
+-- ftd.text: $header.brand-name
 role: $inherited.types.heading-small
 color: $inherited.colors.text-strong
 align-self: center
@@ -716,14 +724,14 @@ spacing.fixed.px: 32
 align-self: center
 
 -- header-links:
-$loop$: $navbar.sections as $obj
+$loop$: $header.sections as $obj
 sections: $obj
 
 -- end: ftd.row
 
 -- ftd.row:
 spacing.fixed.px: 24
-children: $navbar.btn
+children: $header.btn
 align-self: center
 
 -- end: ftd.row
@@ -732,7 +740,7 @@ align-self: center
 
 -- end: ftd.column
 
--- end: navbar
+-- end: header
 
 
 
@@ -994,7 +1002,7 @@ border-width.px if { btn.transparent }: $btn.border-width
 
 -- ftd.text: $btn.title
 role: $inherited.types.button-large
-color: $inherited.colors.text-strong
+color: $inherited.colors.cta-primary.text
 
 -- end: ftd.row
 
@@ -1021,6 +1029,7 @@ integer $width: $width
 width: fill-container
 padding-top.px: 128
 align-content: center
+background.solid: $inherited.colors.background.step-1
 
 -- ftd.row:
 width: fill-container
@@ -1070,16 +1079,20 @@ padding-right.px: 110
 
 -- ftd.text: $savings-info.title
 width.fixed.percent: 90
+color: $inherited.colors.text-strong
 role: $inherited.types.heading-large
 
 -- ftd.text: $savings-info.info1
+color: $inherited.colors.text-strong
 role: $inherited.types.copy-regular
 
 -- ftd.text: $savings-info.info2
+color: $inherited.colors.text-strong
 role: $inherited.types.copy-regular
 
 -- ftd.text: $savings-info.promo-banner-count
 role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
 
 -- ftd.image: $savings-info.src
 anchor: parent
@@ -1104,7 +1117,7 @@ optional ftd.image-src dbl-qoutes:
 optional ftd.image-src arrows:
 integer $width: $width
 children slider-items:
-string id: 
+string id:
 
 -- ftd.column:
 width: fill-container
@@ -1125,7 +1138,7 @@ background.solid: $inherited.colors.custom.two
 
 -- ftd.column:
 width: fill-container
-max-width.fixed.px: 600
+align-self: end
 children: $qoutes.slider-items
 
 -- end: ftd.column
@@ -1169,6 +1182,8 @@ body body:
 
 -- ftd.column:
 width: fill-container
+align-content: center
+spacing.fixed.px: 36
 
 -- ftd.text:
 role: $inherited.types.heading-tiny
@@ -1281,7 +1296,7 @@ ftd.image-src src:
 -- record que:
 caption title:
 body body:
-
+ftd.image-src src:
 
 
 -- record card-info:
