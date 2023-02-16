@@ -1363,3 +1363,143 @@ align-self: center
 -- end: ftd.row
 
 -- end: dark-mode-switcher-float
+
+
+-- component mainblog:
+caption title:
+string blogDate:
+integer likes:
+integer comments:
+body body:
+string author:
+string designation:
+ftd.image-src src:
+
+-- ftd.column:
+
+-- ftd.row:
+
+-- ftd.image: src
+
+-- ftd.column:
+
+-- ftd.row:
+
+-- ftd.column:
+
+-- end: ftd.column
+
+-- ftd.column:
+
+-- end: ftd.column
+
+-- ftd.column:
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: mainblog
+
+
+
+
+
+
+
+
+
+
+-- component blogs:
+caption title:
+blog-info list blog-info-list:
+
+-- ftd.column:
+
+-- ftd.column:
+
+-- ftd.text: $blogs.title
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+
+-- ftd.row:
+spacing.fixed.px: 24
+
+-- blog: $blog-info.title
+$loop$: $blogs.blog-info-list as $blog-info
+src: $blog-info.src
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: blogs
+
+
+
+
+
+
+
+
+
+
+-- component blog:
+caption title:
+ftd.image-src src:
+body body:
+
+-- ftd.column:
+
+-- ftd.column:
+anchor: parent
+left.px: 32
+bottom.px: 32
+
+-- ftd.text: $blog.title
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+
+-- end: ftd.column
+
+ 
+-- ftd.column:
+anchor: parent
+left.px: 32
+bottom.px: 32
+
+-- ftd.text: $blog.title
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $blog.src
+
+-- end: ftd.column
+
+-- end: blog
+
+
+
+
+
+
+
+
+
+
+
+-- record blog-info:
+caption title:
+ftd.image-src src:

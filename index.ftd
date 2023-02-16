@@ -75,7 +75,7 @@ info1: Use our calculator to see how many days we can free up in cash flow for y
 info2: How many promo-banners do you send each month?
 promo-banner-count: 50
 src1: $assets.files.assets.arrow.svg
-src2: $assets.files.assets.savings.svg
+src2: $assets.files.assets.savings.png
 $width: 1440
 
 -- end: lp.savings
