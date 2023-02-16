@@ -1,0 +1,39 @@
+
+-- clients-card: Trusted by the top companies in this industry
+client-list: $list-of-clients
+
+
+The only sos business platiorm that combines CRM...<body>
+
+
+
+
+-- record clients:
+caption title:
+ftd.image-src src: 
+
+
+-- clients list list-of-clients:
+
+-- list-of-clients: SYMTRIC
+src: $assts.files.static.clients.symtric.svg
+
+-- list-of-clients: SYMTRIC
+src: $assts.files.static.clients.symtric.svg
+
+-- list-of-clients: SYMTRIC
+src: $assts.files.static.clients.symtric.svg
+
+-- list-of-clients: SYMTRIC
+src: $assts.files.static.clients.symtric.svg
+
+-- list-of-clients: SYMTRIC
+src: $assts.files.static.clients.symtric.svg
+
+
+-- end: list-of-clients
+
+
+
+
+
