@@ -769,23 +769,20 @@ link: $header-links.sections.url
 
 
 
--- component company:
-caption title:
+-- component client-card:
 ftd.image-src src:
 
--- ftd.row:
-align-content: center
 
--- ftd.image: $company.src
+-- ftd.column:
+background.solid: $inherited.colors.background.base
 
--- ftd.text: $company.title
-role: $inherited.types.heading-small
-margin-left.px: 12
+-- ftd.image:
+src: $client-card.src
+width.fixed.px: 180
 
--- end: ftd.row
+-- end: ftd.column
 
--- end: company
-
+-- end: client-card
 
 
 
@@ -795,11 +792,11 @@ margin-left.px: 12
 
 
 
--- component companies:
+
+-- component clients-container:
 caption title:
-children companies-wrap:
 integer $width: $width
-client list clients:
+clients-record list list-of-clients:
 
 -- ftd.column:
 width: fill-container
@@ -809,11 +806,11 @@ padding-vertical.px: 100
 
 -- ftd.column:
 width: fill-container
-max-width.fixed.px: $companies.width
+max-width.fixed.px: $clients-container.width
 align-self: center
 align-content: center
 
--- ftd.text: $companies.title
+-- ftd.text: $clients-container.title
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 
@@ -823,10 +820,10 @@ spacing.fixed.px: 64
 width: fill-container
 align-content: center
 align-self: center
-max-width.fixed.px: $companies.width
+max-width.fixed.px: $clients-container.width
 
--- company: $client.title
-$loop$: $companies.clients as $client
+-- client-card:
+$loop$: $clients-container.list-of-clients as $client
 src: $client.src
 
 -- end: ftd.row
@@ -835,7 +832,7 @@ src: $client.src
 
 -- end: ftd.column
 
--- end: companies
+-- end: clients-container
 
 
 
@@ -1286,8 +1283,7 @@ children: $slider-nav-wrapper.slider-nav
 
 
 
--- record client:
-caption title:
+-- record clients-record:
 ftd.image-src src:
 
 
@@ -1363,3 +1359,203 @@ align-self: center
 -- end: ftd.row
 
 -- end: dark-mode-switcher-float
+
+
+
+
+
+
+
+
+
+
+-- component blog-hero:
+caption title:
+string blogDate:
+integer likes:
+integer comments:
+body body:
+string author:
+string designation:
+ftd.image-src src:
+integer $width: $width
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.row:
+align-self: center
+max-width.fixed.px: $width
+spacing.fixed.px: 88
+
+-- ftd.image: 
+src: $blog-hero.src
+
+-- ftd.column:
+align-self: center
+
+-- ftd.row:
+spacing.fixed.px: 18
+
+-- ftd.row:
+spacing.fixed.px: 5
+
+-- ftd.image:
+src: $assets.files.assets.calendar.svg
+
+-- ftd.text: $blog-hero.blogDate
+
+-- end: ftd.row
+
+-- ftd.row:
+spacing.fixed.px: 5
+
+-- ftd.image:
+src: $assets.files.assets.comments.svg
+
+-- ftd.text: hi
+
+-- end: ftd.row
+
+-- ftd.row:
+spacing.fixed.px: 5
+
+-- ftd.image:
+src: $assets.files.assets.likes.svg
+
+-- ftd.text: bye
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- ftd.text: $blog-hero.title
+role: $inherited.types.heading-tiny
+color: $inherited.colors.text
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$blog-hero.body
+
+-- ftd.row:
+
+-- btn: Read More
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: blog-hero
+
+
+
+
+
+
+
+
+
+
+-- component article-list:
+caption title:
+blog-info list blog-info-list:
+integer width: $width
+
+-- ftd.column:
+align-content: center
+width: fill-container
+
+-- ftd.column:
+align-self: center
+max-width.fixed.px: $article-list.width
+width: fill-container
+margin-top.px: 124
+margin-bottom.px: 50
+
+-- ftd.text: $article-list.title
+color: $inherited.colors.text
+role: $inherited.types.heading-large
+
+-- ftd.row:
+wrap: true
+spacing.fixed.px: 24
+margin-top.px: 72
+
+-- featured-article: $obj.title
+$loop$: $article-list.blog-info-list as $obj
+src: $obj.src
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: article-list
+
+
+
+
+
+
+
+
+
+
+-- component featured-article:
+caption title:
+ftd.image-src src:
+
+-- ftd.column:
+
+-- ftd.column:
+anchor: parent
+left.px: 32
+bottom.px: 54
+
+-- ftd.text: $featured-article.title
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+
+-- end: ftd.column
+
+ 
+-- ftd.column:
+anchor: parent
+left.px: 32
+bottom.px: 16
+
+-- ftd.text: Read more ->
+color: $inherited.colors.cta-primary.base
+role: $inherited.types.button-small
+
+-- end: ftd.column
+
+-- ftd.image:
+width.fixed.px: 375
+src: $featured-article.src
+
+-- end: ftd.column
+
+-- end: featured-article
+
+
+
+
+
+
+
+
+
+
+
+-- record blog-info:
+caption title:
+ftd.image-src src:

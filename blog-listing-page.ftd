@@ -1,0 +1,129 @@
+-- import: fifthtry.github.io/ds-set-1/lib as lp
+-- import: fifthtry.github.io/ds-set-1/assets
+
+-- lp.page:
+
+-- lp.header: Fastn
+$width: 1440
+
+-- lp.blog-hero: Morbi eu risus nulla. Aliquam erat volutp nullam vitae ex id justo modo facilisis.
+blogDate: 15 Sep, 2021
+likes: 2719
+comments: 273
+designation: UI Designer
+author: Patrika AVA
+src: $assets.files.assets.blog-hero-img.png
+
+Aenean interdum arcu sit amet nulla lacinia suscipit. Vivamus at laoreet mi. Fusce pulvinar commodo ligula, et egestas dolor. Ut hendrerit blandit neque in tempor.
+
+-- end: lp.blog-hero
+
+-- lp.article-list: Latest Blogs
+blog-info-list: $blog-info-list
+
+-- end: lp.article-list
+
+-- lp.signup: Freakishly simple. Downright useful. Ready to make the jump?
+cta-placeholder: Enter your work email...
+cta-label: Sign me up
+info: Sign up in 2 minutes
+src: $assets.files.assets.okay.svg
+
+-- end: lp.signup
+
+-- lp.footer:
+
+-- lp.footer-child1: Fastn
+info: Stay in touch with everything you need
+copyright: Copyright ©2022. Fastn Inc.
+src1: $assets.files.assets.meta.svg
+src2: $assets.files.assets.figma.svg
+src3: $assets.files.assets.google.svg
+src4: $assets.files.assets.tweak.svg
+src5: $assets.files.assets.ball.svg
+
+-- end: lp.footer-child1
+
+-- lp.footer-wrapper:
+
+-- lp.footer-child2: Heading2
+link1: Footer link 1
+link2: Footer link 2
+link3: Footer link 3
+link4: Footer link 4
+link5: Footer link 5
+
+-- end: lp.footer-child2
+
+-- lp.footer-child2: Heading3
+link1: Footer link 1
+link2: Footer link 2
+link3: Footer link 3
+link4: Footer link 4
+link5: Footer link 5
+
+-- end: lp.footer-child2
+
+-- lp.footer-child2: Heading4
+link1: Footer link 1
+link2: Footer link 2
+link3: Footer link 3
+link4: Footer link 4
+link5: Footer link 5
+
+-- end: lp.footer-child2
+
+-- end: lp.footer-wrapper
+
+-- end: lp.footer
+
+-- end: lp.page
+
+
+
+
+
+
+
+
+
+
+-- $lp.blog-info list blog-info-list:
+
+-- $lp.blog-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+src: $assets.files.assets.blog02.png
+
+-- $lp.blog-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+src: $assets.files.assets.blog02.png
+
+-- $lp.blog-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+src: $assets.files.assets.blog02.png
+
+-- $lp.blog-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+src: $assets.files.assets.blog02.png
+
+-- $lp.blog-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+src: $assets.files.assets.blog02.png
+
+-- $lp.blog-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+src: $assets.files.assets.blog02.png
+
+-- $lp.blog-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+src: $assets.files.assets.blog02.png
+
+-- $lp.blog-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+src: $assets.files.assets.blog02.png
+
+-- $lp.blog-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+src: $assets.files.assets.blog02.png
+
+-- $lp.blog-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+src: $assets.files.assets.blog02.png
+
+-- $lp.blog-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+src: $assets.files.assets.blog02.png
+
+-- $lp.blog-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+src: $assets.files.assets.blog02.png
+
+-- end: blog-info-list
