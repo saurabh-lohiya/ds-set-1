@@ -7,15 +7,6 @@
 -- lp.header: Fastn
 $width: 1440
 
--- lp.btn: Login
-transparent: true
-
--- end: lp.btn
-
--- lp.btn: Signup
-
--- end: lp.btn
-
 -- end: lp.header
 
 -- lp.dashboard: Instant, fee-free payments for small business.
@@ -76,7 +67,7 @@ info2: How many promo-banners do you send each month?
 promo-banner-count: 50
 src1: $assets.files.assets.arrow.svg
 src2: $assets.files.assets.savings.png
-$width: 1440
+width: 1440
 
 -- end: lp.savings
 

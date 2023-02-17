@@ -152,7 +152,6 @@ src: $promo-banner.src
 caption title:
 string cta-label:
 body info:
-children btn:
 
 -- ftd.column:
 width: fill-container
@@ -174,9 +173,8 @@ $promo-banner-info.info
 
 -- ftd.column:
 
--- btn: $promo-banner-info.cta-label
-
--- end: btn
+-- cta-button: $promo-banner-info.cta-label
+border-radius: 30
 
 -- end: ftd.column
 
@@ -477,7 +475,8 @@ color: $inherited.colors.text-strong
 
 -- end: ftd.column
 
--- btn: $signup.cta-label
+-- cta-button: $signup.cta-label
+border-radius: 30
 
 -- end: ftd.row
 
@@ -673,7 +672,8 @@ padding.px: 15
 
 -- ftd.column:
 
--- btn: $dashboard-info.cta-label
+-- cta-button: $dashboard-info.cta-label
+border-radius: 30
 
 -- end: ftd.column
 ;; padding-vertical.px: 15
@@ -697,7 +697,6 @@ padding.px: 15
 -- component header:
 caption brand-name:
 integer $width: $width
-children btn:
 pr.toc-item list sections: $sitemap.sections
 
 
@@ -731,7 +730,6 @@ sections: $obj
 
 -- ftd.row:
 spacing.fixed.px: 24
-children: $header.btn
 align-self: center
 
 -- end: ftd.row
@@ -979,31 +977,100 @@ children: $footer-wrapper.footer-child
 
 -- end: footer-wrapper
 
--- component btn:
+
+
+
+
+
+
+
+
+
+-- component cta-button:
 caption title:
-optional boolean transparent: false
-optional integer padding-vertical: 10
-optional integer padding-left: 28
-optional integer padding-right: 28
-optional integer border-width: 1
-optional integer border-radius: 30
-optional integer radius: 5
+optional string role:
+integer border-radius: 0
+optional string link: /
+optional boolean medium: false
+boolean show-arrow: false
+optional ftd.image-src cta-icon:
+optional integer width:
+boolean align-center: false
+integer padding-vertical: 10
+integer padding-horizontal: 28
+boolean transparent: false
+integer border-width: 1
+optional ftd.image-src src: 
+ftd.color bg-color: $inherited.colors.cta-primary.base
+ftd.color text-color: $inherited.colors.cta-primary.text
+
+-- ftd.column:
+align-self if { cta-button.align-center }: center
 
 -- ftd.row:
-border-radius.px: $btn.border-radius
-padding-vertical.px: $btn.padding-vertical
-padding-left.px: $btn.padding-left
-padding-right.px: $btn.padding-right
-background.solid if { !btn.transparent }: $inherited.colors.accent.primary
-border-width.px if { btn.transparent }: $btn.border-width
+if: {!cta-button.medium}
+width.fixed.px if { cta-button.width != NULL}: $cta-button.width
+spacing.fixed.px: 10
+link if { cta-button.link != NULL }: $cta-button.link
+background.solid if { cta-button.role == "primary" }: $inherited.colors.cta-primary.base
+background.solid if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.base
+background.solid if { cta-button.role == NULL }: $cta-button.bg-color
+border-radius.px: $cta-button.border-radius
+padding-vertical.px: $cta-button.padding-vertical
+padding-horizontal.px: $cta-button.padding-horizontal
+align-content: center
 
--- ftd.text: $btn.title
-role: $inherited.types.button-large
-color: $inherited.colors.cta-primary.text
+-- ftd.text: $cta-button.title
+role: $inherited.types.button-medium
+color if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.text
+color if { cta-button.role == "primary" }: $inherited.colors.cta-primary.text
+color if { cta-button.role == NULL }: $cta-button.text-color
+white-space: nowrap
+text-align: center
+
+-- ftd.image:
+if: { cta-button.src != NULL }
+src: $cta-button.src
+width: auto
+height: auto
+align-self: center
 
 -- end: ftd.row
 
--- end: btn
+-- ftd.row:
+if: {cta-button.medium}
+width.fixed.px if { cta-button.width != NULL}: $cta-button.width
+spacing.fixed.px: 10
+link if { cta-button.link != NULL }: $cta-button.link
+background.solid if { cta-button.role == "primary" }: $inherited.colors.cta-primary.base
+background.solid if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.base
+background.solid if { cta-button.role == NULL }: $cta-button.bg-color
+border-radius.px: 30
+padding-vertical.px: $cta-button.padding-vertical
+padding-horizontal.px: $cta-button.padding-horizontal
+align-content: center
+
+-- ftd.text: $cta-button.title
+role: $inherited.types.button-small
+color if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.text
+color if { cta-button.role == "primary" }: $inherited.colors.cta-primary.text
+color if { cta-button.role == NULL }: $cta-button.text-color
+white-space: nowrap
+text-align: center
+
+-- ftd.image:
+if: { cta-button.show-arrow }
+src: $cta-button.src
+width: auto
+height: auto
+align-self: center
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: cta-button
+
 
 
 
@@ -1020,7 +1087,7 @@ string info2:
 string promo-banner-count:
 ftd.image-src src1:
 ftd.image-src src2:
-integer $width: $width
+integer width: $width
 
 -- ftd.column:
 width: fill-container
@@ -1442,7 +1509,8 @@ $blog-hero.body
 
 -- ftd.row:
 
--- btn: Read More
+-- cta-button: Read More
+border-radius: 30
 
 -- end: ftd.row
 
