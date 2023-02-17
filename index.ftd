@@ -26,8 +26,8 @@ src: $assets.files.assets.dashboard.png
 
 -- end: lp.dashboard
 
--- lp.companies: Trusted by the top companies in this industry
-clients: $clients
+-- lp.clients-container: Trusted by the top companies in this industry
+list-of-clients: $list-of-clients
 
 -- lp.generation: Built for the next generation of small business
 
@@ -206,24 +206,24 @@ link5: Footer link 5
 
 
 
--- $lp.client list clients:
+-- $lp.clients-record list list-of-clients:
 
--- $lp.client: Jiggle
+-- $lp.clients-record: 
 src: $assets.files.assets.jiggle.svg
 
--- $lp.client: Symtric
+-- $lp.clients-record: 
 src: $assets.files.assets.symtric.svg
 
--- $lp.client: Wishelp
+-- $lp.clients-record: 
 src: $assets.files.assets.wishelp.svg
 
--- $lp.client: Resecurb
-src: $assets.files.assets.resecurb.svg
+-- $lp.clients-record: 
+src: $assets.files.assets.resecrub.svg
 
--- $lp.client: Welytics
+-- $lp.clients-record: 
 src: $assets.files.assets.welytics.svg
 
--- end: clients
+-- end: list-of-clients
 
 
 
@@ -269,6 +269,11 @@ src: $assets.files.assets.down.svg
 At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
 
 -- end: questions
+
+
+
+
+
 
 
 

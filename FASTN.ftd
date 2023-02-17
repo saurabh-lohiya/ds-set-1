@@ -4,7 +4,7 @@
 download-base-url: https://raw.githubusercontent.com/fifthtry/ds-set-1/main
 
 -- fastn.dependency: fifthtry.github.io/ds-set1-typography as typo
--- fastn.dependency: fifthtry.github.io/ds-set1-cs as cs
+-- fastn.dependency: fifthtry.github.io/winter-cs as cs
 
 
 
