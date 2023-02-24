@@ -3,11 +3,8 @@
 -- $lp.current-slide: 1
 
 -- lp.page:
-
--- lp.header: Fastn
-$width: 1440
-
--- end: lp.header
+header-width: 1440
+brand-name: Fastn
 
 -- lp.dashboard: Instant, fee-free payments for small business.
 info: Pay and get paid in real-time with zero fees. Secure, streamlined, and super fast.
@@ -30,6 +27,7 @@ Hopscotch is an all-in-one payments platform where businesses can connect, trans
 cta-label: Sign me up
 bg-color: $inherited.colors.custom.four
 src: $assets.files.assets.invoicing.png
+cta-url: /
 
 Pay and get paid like never before. Auto-generate promo-banners, send reminders, schedule payments, and instantly access money when someone pays you.
 
@@ -40,6 +38,7 @@ img-order-left: true
 cta-label: Sign me up
 bg-color: $inherited.colors.custom.four
 src: $assets.files.assets.cash_control.png
+cta-url: /
 
 Can’t wait to get paid? Fastn Flow helps you avoid gaps in cash flow, stay flexible, and grow your business on your terms.
 
@@ -49,17 +48,18 @@ Can’t wait to get paid? Fastn Flow helps you avoid gaps in cash flow, stay fle
 cta-label: Sign me up
 bg-color: $inherited.colors.custom.four
 src: $assets.files.assets.smart_dashboard.png
+cta-url: /
 
 Our dashboard is simple to navigate and packed with useful features. It also integrates seamlessly with accounting platforms like Quickbooks.
 
 -- end: lp.promo-banner
 
--- lp.history: Headaches are history
-src: $assets.files.assets.history.svg
+-- lp.feature-banner: Headaches are history
+banner-img: $assets.files.assets.history.svg
 
 Easily manage what’s coming in and going out.
 
--- end: lp.history
+-- end: lp.feature-banner
 
 -- lp.savings: See how much faster you can get paid with Fastn
 info1: Use our calculator to see how many days we can free up in cash flow for your business.
@@ -129,22 +129,23 @@ index: 3
 
 -- end: lp.qoutes
 
--- lp.card-container: Why Fastn?
+-- lp.features: Why Fastn?
 info: We’re putting your other payments platform in timeout.
-cards: $cards
+list-of-features: $list-of-features
 
--- end: lp.card-container
+-- end: lp.features
 
 -- lp.faq: Frequently Answered Questions
 questions: $questions
+dropdown-icon: $assets.files.assets.down.svg
 
--- lp.signup: Freakishly simple. Downright useful. Ready to make the jump?
+-- lp.newsletter: Freakishly simple. Downright useful. Ready to make the jump?
 cta-placeholder: Enter your work email...
 cta-label: Sign me up
 info: Sign up in 2 minutes
-src: $assets.files.assets.okay.svg
+info-icon: $assets.files.assets.okay.svg
 
--- end: lp.signup
+-- end: lp.newsletter
 
 -- lp.footer:
 
@@ -197,21 +198,21 @@ link5: Footer link 5
 
 
 
--- $lp.clients-record list list-of-clients:
+-- $lp.client-record list list-of-clients:
 
--- $lp.clients-record: 
+-- $lp.client-record: 
 src: $assets.files.assets.jiggle.svg
 
--- $lp.clients-record: 
+-- $lp.client-record: 
 src: $assets.files.assets.symtric.svg
 
--- $lp.clients-record: 
+-- $lp.client-record: 
 src: $assets.files.assets.wishelp.svg
 
--- $lp.clients-record: 
+-- $lp.client-record: 
 src: $assets.files.assets.resecrub.svg
 
--- $lp.clients-record: 
+-- $lp.client-record: 
 src: $assets.files.assets.welytics.svg
 
 -- end: list-of-clients
@@ -222,40 +223,33 @@ src: $assets.files.assets.welytics.svg
 
 
 
--- $lp.que list questions:
+-- $lp.question-record list questions:
 
--- $lp.que: Are there really zero fees? 
-src: $assets.files.assets.down.svg
-
-At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
-
--- $lp.que: Are there really zero fees?
-src: $assets.files.assets.down.svg
+-- $lp.question-record: Are there really zero fees? 
 
 At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
 
--- $lp.que: Are there really zero fees?
-src: $assets.files.assets.down.svg
+-- $lp.question-record: Are there really zero fees?
 
 At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
 
--- $lp.que: Are there really zero fees?
-src: $assets.files.assets.down.svg
+-- $lp.question-record: Are there really zero fees?
 
 At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
 
--- $lp.que: Are there really zero fees?
-src: $assets.files.assets.down.svg
+-- $lp.question-record: Are there really zero fees?
 
 At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
 
--- $lp.que: Are there really zero fees?
-src: $assets.files.assets.down.svg
+-- $lp.question-record: Are there really zero fees?
 
 At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
 
--- $lp.que: Are there really zero fees?
-src: $assets.files.assets.down.svg
+-- $lp.question-record: Are there really zero fees?
+
+At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
+
+-- $lp.question-record: Are there really zero fees?
 
 At Hopscotch, we believe businesses shouldn’t have to wait or pay to access money they’ve already earned. That’s why it doesn’t cost a penny to create an account and there are zero transaction fees when you use the Hopscotch platform to pay and get paid. If you decide to leverage some of our more premium payment features (like Hopscotch Flow, which lets you get paid before your client pays you) there may be a small service fee—
 
@@ -270,26 +264,26 @@ At Hopscotch, we believe businesses shouldn’t have to wait or pay to access mo
 
 
 
--- $lp.card-info list cards:
+-- $lp.feature-record list list-of-features:
 
--- $lp.card-info: Are there really zero fees?
+-- $lp.feature-record: Are there really zero fees?
 src: $assets.files.assets.secure.svg
 
 We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
 
--- $lp.card-info: Are there really zero fees?
+-- $lp.feature-record: Are there really zero fees?
 src: $assets.files.assets.secure.svg
 
 We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
 
--- $lp.card-info: Are there really zero fees?
+-- $lp.feature-record: Are there really zero fees?
 src: $assets.files.assets.secure.svg
 
 We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
 
--- $lp.card-info: Are there really zero fees?
+-- $lp.feature-record: Are there really zero fees?
 src: $assets.files.assets.secure.svg
 
 We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
 
--- end: cards
+-- end: list-of-features

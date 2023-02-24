@@ -1,0 +1,371 @@
+-- import: fifthtry.github.io/ds-set-1/lib as lp
+-- import: fifthtry.github.io/ds-set-1/assets
+
+-- lp.page: API Page
+brand-name: Fastn
+header-width: 1440
+
+-- lp.page-wrapper:
+width: 1440
+
+-- lp.col:
+width: 22.22
+padding-horizontal: 24
+
+-- lp.left-sidebar: hello
+arrow: $assets.files.assets.right-arrow-icon.svg
+list-of-navs: $list-of-navs
+
+-- end: lp.col
+
+-- lp.col:
+width: 48.125
+padding-horizontal: 50
+
+-- lp.blog-section: API References
+paragraphs: $paras-list1
+
+-- end: lp.blog-section
+
+-- lp.blog-section: Authentication
+paragraphs: $paras-list2
+
+-- end: lp.blog-section
+
+-- lp.blog-section: Connected Accounts
+paragraphs: $paras-list3
+
+-- end: lp.blog-section
+
+-- lp.blog-section: Errors
+paragraphs: $paras-list4
+
+-- end: lp.blog-section
+
+-- lp.blog-section: Handling Errors
+paragraphs: $paras-list5
+
+-- end: lp.blog-section
+
+-- lp.blog-section: Expanding Responses
+paragraphs: $paras-list6
+
+-- end: lp.blog-section
+
+-- lp.blog-section: Idempotent Requests
+paragraphs: $paras-list7
+
+-- end: lp.blog-section
+
+-- lp.blog-section: Metadata
+paragraphs: $paras-list8
+
+-- end: lp.blog-section
+
+-- lp.blog-section: Pagination
+paragraphs: $paras-list8
+
+-- end: lp.blog-section
+
+-- end: lp.col
+
+-- lp.col:
+width: 29.65
+padding-horizontal: 24
+
+-- lp.card1: Global Api Key
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
+tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
+quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos 
+sapiente officiis modi at sunt
+
+-- end: lp.card1
+
+-- lp.card1: Global Api Key
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
+tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
+quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos 
+sapiente officiis modi at sunt
+
+-- end: lp.card1
+
+-- lp.card1: Global Api Key
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
+tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
+quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos 
+sapiente officiis modi at sunt
+
+-- end: lp.card1
+
+-- lp.card1: Global Api Key
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
+tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
+quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos 
+sapiente officiis modi at sunt
+
+-- end: lp.card1
+
+-- lp.card1: Global Api Key
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
+tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
+quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos 
+sapiente officiis modi at sunt
+
+-- end: lp.card1
+
+-- lp.card1: Global Api Key
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
+tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
+quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos 
+sapiente officiis modi at sunt
+
+-- end: lp.card1
+
+-- end: lp.col
+
+-- end: lp.page-wrapper
+
+-- lp.footer:
+
+-- lp.footer-child1: Fastn
+info: Stay in touch with everything you need
+copyright: Copyright ©2022. Fastn Inc.
+src1: $assets.files.assets.meta.svg
+src2: $assets.files.assets.figma.svg
+src3: $assets.files.assets.google.svg
+src4: $assets.files.assets.tweak.svg
+src5: $assets.files.assets.ball.svg
+
+-- end: lp.footer-child1
+
+-- lp.footer-wrapper:
+
+-- lp.footer-child2: Heading2
+link1: Footer link 1
+link2: Footer link 2
+link3: Footer link 3
+link4: Footer link 4
+link5: Footer link 5
+
+-- end: lp.footer-child2
+
+-- lp.footer-child2: Heading3
+link1: Footer link 1
+link2: Footer link 2
+link3: Footer link 3
+link4: Footer link 4
+link5: Footer link 5
+
+-- end: lp.footer-child2
+
+-- lp.footer-child2: Heading4
+link1: Footer link 1
+link2: Footer link 2
+link3: Footer link 3
+link4: Footer link 4
+link5: Footer link 5
+
+-- end: lp.footer-child2
+
+-- end: lp.footer-wrapper
+
+-- end: lp.footer
+
+-- end: lp.page
+
+
+
+
+
+
+
+-- $lp.para list paras-list1:
+
+-- $lp.para:
+body: The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- $lp.para:
+body: The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- $lp.para:
+body: The Stripe API doesn't support bulk updates. You can work on only one object per request.
+
+-- $lp.para:
+body: The Stripe API differs for every account as we release new versions and tailor functionality. Log in to see docs customised to your version of the API, with your test key and data
+
+-- end: paras-list1
+
+-- $lp.para list paras-list2:
+
+-- $lp.para:
+body: The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- $lp.para:
+body: The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- $lp.para:
+body: The Stripe API doesn't support bulk updates. You can work on only one object per request.
+
+-- $lp.para:
+body: The Stripe API differs for every account as we release new versions and tailor functionality. Log in to see docs customised to your version of the API, with your test key and data
+
+-- end: paras-list2
+
+-- $lp.para list paras-list3:
+
+-- $lp.para:
+body: The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- $lp.para:
+body: The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- $lp.para:
+body: The Stripe API doesn't support bulk updates. You can work on only one object per request.
+
+-- $lp.para:
+body: The Stripe API differs for every account as we release new versions and tailor functionality. Log in to see docs customised to your version of the API, with your test key and data
+
+-- end: paras-list3
+
+-- $lp.para list paras-list4:
+
+-- $lp.para:
+body: The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- $lp.para:
+body: The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- $lp.para:
+body: The Stripe API doesn't support bulk updates. You can work on only one object per request.
+
+-- $lp.para:
+body: The Stripe API differs for every account as we release new versions and tailor functionality. Log in to see docs customised to your version of the API, with your test key and data
+
+-- end: paras-list4
+
+-- $lp.para list paras-list5:
+
+-- $lp.para:
+body: The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- $lp.para:
+body: The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- $lp.para:
+body: The Stripe API doesn't support bulk updates. You can work on only one object per request.
+
+-- $lp.para:
+body: The Stripe API differs for every account as we release new versions and tailor functionality. Log in to see docs customised to your version of the API, with your test key and data
+
+-- end: paras-list5
+
+-- $lp.para list paras-list6:
+
+-- $lp.para:
+body: The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- $lp.para:
+body: The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- $lp.para:
+body: The Stripe API doesn't support bulk updates. You can work on only one object per request.
+
+-- $lp.para:
+body: The Stripe API differs for every account as we release new versions and tailor functionality. Log in to see docs customised to your version of the API, with your test key and data
+
+-- end: paras-list6
+
+-- $lp.para list paras-list7:
+
+-- $lp.para:
+body: The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- $lp.para:
+body: The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- $lp.para:
+body: The Stripe API doesn't support bulk updates. You can work on only one object per request.
+
+-- $lp.para:
+body: The Stripe API differs for every account as we release new versions and tailor functionality. Log in to see docs customised to your version of the API, with your test key and data
+
+-- end: paras-list7
+
+-- $lp.para list paras-list8:
+
+-- $lp.para:
+body: The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- $lp.para:
+body: The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- $lp.para:
+body: The Stripe API doesn't support bulk updates. You can work on only one object per request.
+
+-- $lp.para:
+body: The Stripe API differs for every account as we release new versions and tailor functionality. Log in to see docs customised to your version of the API, with your test key and data
+
+-- end: paras-list8
+
+
+
+
+-- $lp.document-record list list-of-navs:
+
+-- $lp.document-record: Home
+
+this is body
+
+-- $lp.document-record: Pocket
+
+this is body
+
+-- $lp.document-record: History
+
+this is body
+
+-- $lp.document-record: Service
+
+this is body
+
+-- $lp.document-record: Saved
+
+this is body
+
+-- end: list-of-navs

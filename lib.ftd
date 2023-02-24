@@ -2,7 +2,7 @@
 -- import: cs
 -- import: fastn/processors as pr
 
-
+-- integer $current-page: 1
 
 
 -- pr.sitemap-data sitemap:
@@ -27,12 +27,13 @@ $processor$: pr.full-sitemap
 -- component page:
 optional caption title:
 optional body body:
+string brand-name:
 optional ftd.color bgcolor-landing-hero:
 children page-wrap:
 ftd.type-data types: $typo.types
 ftd.color-scheme colors: $cs.main
 pr.toc-item list sections: $sitemap.sections
-
+integer header-width: $width
 
 -- ftd.column:
 width: fill-container
@@ -55,6 +56,19 @@ max-width.fixed.px: $width
 align-self: center
 
 -- end: ftd.column
+
+-- header: $page.brand-name
+width: $page.header-width
+
+-- end: header
+
+-- ftd.text: $page.title
+if: { $page.title != NULL }
+color: $inherited.colors.text
+role: $inherited.types.heading-large
+align-self: start
+padding-vertical.px: 50
+padding-left.px: 40
 
 -- ftd.column:
 width: fill-container
@@ -79,14 +93,19 @@ children: $page.page-wrap
 
 -- component promo-banner:
 caption title:
-string cta-label:
-body info:
-ftd.color bg-color:
+body body:
+boolean img-order-left: false
 ftd.image-src src:
+ftd.color bg-color:
+optional ftd.image-src cta-icon:
+string cta-label:
+string cta-url:
 children promo-banner-wrap:
 optional integer padding-vertical: 50
 optional integer padding-horizontal: 85
-boolean img-order-left: false
+optional integer padding-left:
+optional integer padding-right:
+integer width: $width
 
 -- ftd.column:
 width: fill-container
@@ -100,7 +119,7 @@ padding-vertical.px: $promo-banner.padding-vertical
 border-radius.px: 20
 padding-horizontal.px: 85
 width: fill-container
-max-width.fixed.px: $width
+max-width.fixed.px: $promo-banner.width
 align-self: center
 
 -- promo-banner-img:
@@ -108,7 +127,8 @@ src: $promo-banner.src
 
 -- promo-banner-info: $promo-banner.title
 cta-label: $promo-banner.cta-label
-info: $promo-banner.info
+cta-url: $promo-banner.cta-url
+body: $promo-banner.body
 
 -- end: promo-banner-info
 
@@ -121,12 +141,13 @@ padding-vertical.px: $promo-banner.padding-vertical
 border-radius.px: 20
 padding-horizontal.px: 85
 width: fill-container
-max-width.fixed.px: $width
+max-width.fixed.px: $promo-banner.width
 align-self: center
 
 -- promo-banner-info: $promo-banner.title
 cta-label: $promo-banner.cta-label
-info: $promo-banner.info
+cta-url: $promo-banner.cta-url
+body: $promo-banner.body
 
 -- end: promo-banner-info
 
@@ -151,7 +172,9 @@ src: $promo-banner.src
 -- component promo-banner-info:
 caption title:
 string cta-label:
-body info:
+string cta-url:
+body body:
+children cta-button:
 
 -- ftd.column:
 width: fill-container
@@ -169,12 +192,14 @@ margin-top.px: 32
 margin-bottom.px: 40
 max-width.fixed.percent: 85
 
-$promo-banner-info.info
+$promo-banner-info.body
 
 -- ftd.column:
 
 -- cta-button: $promo-banner-info.cta-label
-border-radius: 30
+link: $promo-banner-info.cta-url
+
+-- end: cta-button
 
 -- end: ftd.column
 
@@ -214,10 +239,10 @@ height: auto
 
 
 
--- component card:
+-- component feature-card:
 caption title:
-ftd.image-src src:
 body body:
+ftd.image-src feature-icon:
 
 -- ftd.column:
 min-height.fixed.px: 276
@@ -230,10 +255,10 @@ padding-horizontal.px: 40
 border-radius.px: 10
 
 -- ftd.image: 
-src: $card.src
+src: $feature-card.feature-icon
 border-radius.px: 50
 
--- ftd.text: $card.title
+-- ftd.text: $feature-card.title
 margin-top.px: 24 
 role: $inherited.types.copy-regular
 
@@ -242,11 +267,11 @@ margin-top.px: 8
 role: $inherited.types.copy-small
 max-width.fixed.percent: 60
 
-$card.body
+$feature-card.body
 
 -- end: ftd.column
 
--- end: card
+-- end: feature-card
 
 
 
@@ -256,11 +281,12 @@ $card.body
 
 
 
--- component card-container:
+-- component features:
 caption title:
 string info:
-integer $width: $width
-card-info list cards:
+optional string label:
+feature-record list list-of-features:
+integer width: $width
 
 -- ftd.column:
 width: fill-container
@@ -274,10 +300,10 @@ align-self: center
 align-content: center
 padding-vertical.px: 55
 
--- ftd.text: $card-container.title
+-- ftd.text: $features.title
 role: $inherited.types.heading-large
 
--- ftd.text: $card-container.info
+-- ftd.text: $features.info
 role: $inherited.types.copy-large
 
 -- ftd.row:
@@ -287,9 +313,9 @@ spacing.fixed.px: 20
 width: fill-container
 align-content: center
 
--- card: $card.title
-$loop$: $card-container.cards as $card
-src: $card.src
+-- feature-card: $card.title
+$loop$: $features.list-of-features as $card
+feature-icon: $card.src
 
 $card.body
 
@@ -299,7 +325,7 @@ $card.body
 
 -- end: ftd.column
 
--- end: card-container
+-- end: features
 
 
 
@@ -310,9 +336,10 @@ $card.body
 
 
 
--- component generation: 
+-- component generation:
 caption title:
-body info:
+body body:
+optional ftd.image-src bg-img:
 integer $width: $width
 
 -- ftd.column:
@@ -338,7 +365,7 @@ max-width.fixed.px: 840
 color: $inherited.colors.text
 role: $inherited.types.copy-regular
 
-$generation.info
+$generation.body
 
 -- end: ftd.column
 
@@ -355,11 +382,12 @@ $generation.info
 
 
 
--- component history:
+-- component feature-banner:
 caption title:
 body info:
-ftd.image-src src:
-integer $width: $width
+ftd.image-src banner-img:
+optional ftd.image-src bg-img:
+integer width: $width
 
 -- ftd.column:
 width: fill-container
@@ -378,7 +406,7 @@ align-content: center
 padding-bottom.px: 50
 align-content: center
 
--- ftd.text: $history.title
+-- ftd.text: $feature-banner.title
 role: $inherited.types.heading-large
 color: $inherited.colors.text
 
@@ -386,11 +414,11 @@ color: $inherited.colors.text
 role: $inherited.types.copy-large
 color: $inherited.colors.text
 
-$history.info
+$feature-banner.info
 
 -- end: ftd.column
 
--- ftd.image: $history.src
+-- ftd.image: $feature-banner.banner-img
 width: auto
 height: auto
 padding-horizontal.px: 58
@@ -399,7 +427,7 @@ padding-horizontal.px: 58
 
 -- end: ftd.column
 
--- end: history
+-- end: feature-banner
 
 
 
@@ -410,13 +438,14 @@ padding-horizontal.px: 58
 
 
 
--- component signup:
+-- component newsletter:
 caption title:
-integer $width: $width
 string cta-label:
-string info:
 string cta-placeholder:
-ftd.image-src src:
+optional string info:
+optional ftd.image-src cta-icon:
+optional ftd.image-src info-icon:
+integer width: $width
 
 -- ftd.column:
 width: fill-container
@@ -424,7 +453,7 @@ align-content: center
 background.solid: $inherited.colors.custom.four
 
 -- ftd.row:
-max-width.fixed.px: $signup.width
+max-width.fixed.px: $newsletter.width
 padding-vertical.px: 60
 align-self: center
 
@@ -439,7 +468,7 @@ border-radius.px: 20
 padding-right.px: 16
 width.fixed.percent: 50
 
--- ftd.text: $signup.title
+-- ftd.text: $newsletter.title
 role: $inherited.types.heading-small
 color: $inherited.colors.text-strong
 
@@ -454,7 +483,7 @@ spacing.fixed.px: 20
 spacing.fixed.px: 15
 
 -- ftd.text-input:
-placeholder: $signup.cta-placeholder
+placeholder: $newsletter.cta-placeholder
 padding-vertical.px: 15
 padding-horizontal.px: 15
 border-radius.px: 30
@@ -464,10 +493,11 @@ width.fixed.px: 310
 spacing.fixed.px: 10
 align-content: center
 
--- ftd.image: 
-src: $signup.src
+-- ftd.image:
+if: { newsletter.info-icon != NULL }
+src: $newsletter.info-icon
 
--- ftd.text: $signup.info
+-- ftd.text: $newsletter.info
 role: $inherited.types.label-small
 color: $inherited.colors.text-strong
 
@@ -475,8 +505,7 @@ color: $inherited.colors.text-strong
 
 -- end: ftd.column
 
--- cta-button: $signup.cta-label
-border-radius: 30
+-- cta-button: $newsletter.cta-label
 
 -- end: ftd.row
 
@@ -488,7 +517,7 @@ border-radius: 30
 
 -- end: ftd.column
 
--- end: signup
+-- end: newsletter
 
 
 
@@ -499,7 +528,7 @@ border-radius: 30
 
 
 
--- component question: 
+-- component question-accordion: 
 caption title:
 body body:
 boolean $open: false
@@ -515,12 +544,12 @@ border-color: $inherited.colors.border
 width: fill-container
 spacing: space-between
 
--- ftd.text: $question.title
+-- ftd.text: $question-accordion.title
 role: $inherited.types.heading-small
-$on-click$: $ftd.toggle($a = $question.open)
+$on-click$: $ftd.toggle($a = $question-accordion.open)
 
 -- ftd.image:
-src: $question.src
+src: $question-accordion.src
 
 -- end: ftd.row
 
@@ -528,13 +557,13 @@ src: $question.src
 margin-top.px: 20
 max-width.fixed.percent: 80
 role: $inherited.types.copy-regular
-if: { question.open }
+if: { question-accordion.open }
 
-$question.body
+$question-accordion.body
 
 -- end: ftd.column
 
--- end: question
+-- end: question-accordion
 
 
 
@@ -547,8 +576,10 @@ $question.body
 
 -- component faq:
 caption title:
-integer $width: $width
-que list questions:
+optional body body:
+question-record list questions:
+ftd.image-src dropdown-icon:
+integer width: $width
 
 -- ftd.column:
 width: fill-container
@@ -569,9 +600,9 @@ role: $inherited.types.heading-medium
 -- ftd.column:
 width: fill-container
 
--- question: $question.title
+-- question-accordion: $question.title
 $loop$: $faq.questions as $question
-src: $question.src
+src: $faq.dropdown-icon
 body: $question.body
 
 -- end: ftd.column
@@ -673,7 +704,6 @@ padding.px: 15
 -- ftd.column:
 
 -- cta-button: $dashboard-info.cta-label
-border-radius: 30
 
 -- end: ftd.column
 ;; padding-vertical.px: 15
@@ -696,7 +726,7 @@ border-radius: 30
 
 -- component header:
 caption brand-name:
-integer $width: $width
+integer width: $width
 pr.toc-item list sections: $sitemap.sections
 
 
@@ -730,7 +760,12 @@ sections: $obj
 
 -- ftd.row:
 spacing.fixed.px: 24
-align-self: center
+align-self: end
+
+-- cta-button: Login
+transparent: true
+
+-- cta-button: Sign Up
 
 -- end: ftd.row
 
@@ -793,8 +828,9 @@ width.fixed.px: 180
 
 -- component clients-container:
 caption title:
+optional body body:
 integer $width: $width
-clients-record list list-of-clients:
+client-record list list-of-clients:
 
 -- ftd.column:
 width: fill-container
@@ -985,11 +1021,10 @@ children: $footer-wrapper.footer-child
 
 
 
-
 -- component cta-button:
 caption title:
-optional string role:
-integer border-radius: 0
+optional string role: primary
+integer border-radius: 30
 optional string link: /
 optional boolean medium: false
 boolean show-arrow: false
@@ -1000,9 +1035,7 @@ integer padding-vertical: 10
 integer padding-horizontal: 28
 boolean transparent: false
 integer border-width: 1
-optional ftd.image-src src: 
-ftd.color bg-color: $inherited.colors.cta-primary.base
-ftd.color text-color: $inherited.colors.cta-primary.text
+optional ftd.image-src src:
 
 -- ftd.column:
 align-self if { cta-button.align-center }: center
@@ -1014,7 +1047,6 @@ spacing.fixed.px: 10
 link if { cta-button.link != NULL }: $cta-button.link
 background.solid if { cta-button.role == "primary" }: $inherited.colors.cta-primary.base
 background.solid if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.base
-background.solid if { cta-button.role == NULL }: $cta-button.bg-color
 border-radius.px: $cta-button.border-radius
 padding-vertical.px: $cta-button.padding-vertical
 padding-horizontal.px: $cta-button.padding-horizontal
@@ -1024,7 +1056,6 @@ align-content: center
 role: $inherited.types.button-medium
 color if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.text
 color if { cta-button.role == "primary" }: $inherited.colors.cta-primary.text
-color if { cta-button.role == NULL }: $cta-button.text-color
 white-space: nowrap
 text-align: center
 
@@ -1044,7 +1075,6 @@ spacing.fixed.px: 10
 link if { cta-button.link != NULL }: $cta-button.link
 background.solid if { cta-button.role == "primary" }: $inherited.colors.cta-primary.base
 background.solid if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.base
-background.solid if { cta-button.role == NULL }: $cta-button.bg-color
 border-radius.px: 30
 padding-vertical.px: $cta-button.padding-vertical
 padding-horizontal.px: $cta-button.padding-horizontal
@@ -1054,7 +1084,6 @@ align-content: center
 role: $inherited.types.button-small
 color if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.text
 color if { cta-button.role == "primary" }: $inherited.colors.cta-primary.text
-color if { cta-button.role == NULL }: $cta-button.text-color
 white-space: nowrap
 text-align: center
 
@@ -1091,7 +1120,7 @@ integer width: $width
 
 -- ftd.column:
 width: fill-container
-padding-top.px: 128
+padding-vertical.px: 128
 align-content: center
 background.solid: $inherited.colors.background.step-1
 
@@ -1102,6 +1131,7 @@ align-self: center
 
 -- ftd.column:
 align-self: center
+max-width.fixed.percent: 50
 
 -- savings-info: $savings.title
 info1: $savings.info1
@@ -1111,13 +1141,109 @@ src: $savings.src1
 
 -- end: ftd.column
 
--- ftd.image: $savings.src2
+-- ftd.column:
+max-width.fixed.percent: 50
+width: fill-container
+-- info-blocks:
+
+-- end: info-blocks
+
+
+-- ftd.column:
+anchor: parent
+bottom.px: -128
+width: fill-container
+height.fixed.px: 450
+border-top-left-radius.px: 150
+background.solid: $inherited.colors.custom.one
+
+-- end: ftd.column
+
+-- end: ftd.column
 
 -- end: ftd.row
 
 -- end: ftd.column
 
 -- end: savings
+
+
+
+
+
+
+
+
+
+-- component info-block:
+caption title:
+body body:
+
+-- ftd.column:
+padding-vertical.px: 45
+padding-horizontal.px: 45
+
+-- ftd.text: $info-block.title
+role: $inherited.types.heading-small
+color: $inherited.colors.text
+
+-- ftd.text:
+role: $inherited.types.copy-small
+color: $inherited.colors.text
+max-width.fixed.px: 330
+
+$info-block.body
+
+-- end: ftd.column
+
+-- end: info-block
+
+
+
+
+
+
+
+-- component info-blocks:
+
+-- ftd.column:
+border-radius.px: 10
+background.solid: $inherited.colors.background.step-1
+z-index: 1
+max-width.fixed.px: 430
+margin-left.px: 70
+
+-- ftd.column:
+background.solid: $inherited.colors.background.base
+border-top-left-radius.px: 10
+border-top-right-radius.px: 10
+padding-top.px: 30
+
+-- info-block: Your savings
+
+Based on \$10 transaction fee and 3-day payment processing time per invoice.
+
+-- end: ftd.column
+
+-- ftd.column:
+border-top-width.px: 2
+border-bottom-width.px: 2
+border-color: $inherited.colors.background.overlay
+width: fill-container
+
+-- info-block: \$1500
+
+saved/year in fees
+
+-- end: ftd.column
+
+-- info-block: 560 net days
+
+saved/year in payment processing time
+
+-- end: ftd.column
+
+-- end: info-blocks
 
 
 
@@ -1140,6 +1266,7 @@ align-self: center
 spacing.fixed.px: 24
 padding-left.px: 165
 padding-right.px: 110
+width: fill-container
 
 -- ftd.text: $savings-info.title
 width.fixed.percent: 90
@@ -1179,7 +1306,7 @@ top.px: 330
 -- component qoutes:
 optional ftd.image-src dbl-qoutes:
 optional ftd.image-src arrows:
-integer $width: $width
+integer width: $width
 children slider-items:
 string id:
 
@@ -1206,14 +1333,6 @@ align-self: end
 children: $qoutes.slider-items
 
 -- end: ftd.column
-
--- ftd.row:
-spacing.fixed.px: 10
-anchor: parent
-left.px: 36
-bottom.px: 50
-
--- end: ftd.row
 
 -- ftd.image: $qoutes.dbl-qoutes
 anchor: parent
@@ -1350,19 +1469,18 @@ children: $slider-nav-wrapper.slider-nav
 
 
 
--- record clients-record:
+-- record client-record:
 ftd.image-src src:
 
 
 
 
--- record que:
+-- record question-record:
 caption title:
 body body:
-ftd.image-src src:
 
 
--- record card-info:
+-- record feature-record:
 caption title:
 body body:
 ftd.image-src src:
@@ -1436,20 +1554,30 @@ align-self: center
 
 
 
--- component blog-hero:
+-- component article-hero:
 caption title:
-string blogDate:
-integer likes:
-integer comments:
 body body:
-string author:
-string designation:
+optional string date:
+optional string likes:
+optional string comments:
+optional ftd.image-src date-icon:
+optional ftd.image-src likes-icon:
+optional ftd.image-src comments-icon:
+optional string author:
+optional string author-profile:
+optional ftd.image-src author-icon:
 ftd.image-src src:
-integer $width: $width
+integer width: $width
 
 -- ftd.column:
 width: fill-container
 align-content: center
+
+-- ftd.column:
+width: fill-container
+align-content: center
+max-width.fixed.px: $article-hero.width
+padding-vertical.px: 50
 
 -- ftd.row:
 align-self: center
@@ -1457,7 +1585,7 @@ max-width.fixed.px: $width
 spacing.fixed.px: 88
 
 -- ftd.image: 
-src: $blog-hero.src
+src: $article-hero.src
 
 -- ftd.column:
 align-self: center
@@ -1469,19 +1597,9 @@ spacing.fixed.px: 18
 spacing.fixed.px: 5
 
 -- ftd.image:
-src: $assets.files.assets.calendar.svg
+src: $article-hero.date-icon
 
--- ftd.text: $blog-hero.blogDate
-
--- end: ftd.row
-
--- ftd.row:
-spacing.fixed.px: 5
-
--- ftd.image:
-src: $assets.files.assets.comments.svg
-
--- ftd.text: hi
+-- ftd.text: $article-hero.date
 
 -- end: ftd.row
 
@@ -1489,85 +1607,145 @@ src: $assets.files.assets.comments.svg
 spacing.fixed.px: 5
 
 -- ftd.image:
-src: $assets.files.assets.likes.svg
+src: $article-hero.likes-icon
 
--- ftd.text: bye
+-- ftd.text: $article-hero.likes
+
+-- end: ftd.row
+
+-- ftd.row:
+spacing.fixed.px: 5
+
+-- ftd.image:
+src: $article-hero.comments-icon
+
+-- ftd.text: $article-hero.comments
 
 -- end: ftd.row
 
 -- end: ftd.row
 
--- ftd.text: $blog-hero.title
+-- ftd.text: $article-hero.title
 role: $inherited.types.heading-tiny
 color: $inherited.colors.text
+margin-top.px: 24
 
 -- ftd.text:
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
+margin-top.px: 12
 
-$blog-hero.body
+$article-hero.body
 
 -- ftd.row:
+margin-top.px: 24
+spacing.fixed.px: 20
 
 -- cta-button: Read More
-border-radius: 30
-
--- end: ftd.row
-
--- end: ftd.column
-
--- end: ftd.row
-
--- end: ftd.column
-
--- end: blog-hero
-
-
-
-
-
-
-
-
-
-
--- component article-list:
-caption title:
-blog-info list blog-info-list:
-integer width: $width
 
 -- ftd.column:
+padding-left.px: 20
+border-left-width.px: 1
+
+-- user: $article-hero.author
+src: $article-hero.author-icon
+
+$article-hero.author-profile
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: article-hero
+
+
+
+
+
+-- component article-wrapper:
+optional integer index:
+optional integer reset:
+children slide:
+
+-- ftd.column:
+if : { article-wrapper.index == article-wrapper.reset }
+width: fill-container
 align-content: center
-width: fill-container
+children: $article-wrapper.slide
+
+-- end: ftd.column
+
+-- end: article-wrapper
+
+
+
+
+
+
+
+
+
+
+-- component article-nav-wrapper:
+children article-nav:
+string parent-id:
+ftd.image-src left-arrow-icon:
+ftd.image-src right-arrow-icon:
 
 -- ftd.column:
-align-self: center
-max-width.fixed.px: $article-list.width
-width: fill-container
-margin-top.px: 124
-margin-bottom.px: 50
 
--- ftd.text: $article-list.title
-color: $inherited.colors.text
-role: $inherited.types.heading-large
+-- ftd.row: 
+spacing.fixed.px: 20
+
+-- ftd.image:
+src: $article-nav-wrapper.left-arrow-icon
 
 -- ftd.row:
-wrap: true
-spacing.fixed.px: 24
-margin-top.px: 72
+spacing.fixed.px: 10
+children: $article-nav-wrapper.article-nav
 
--- featured-article: $obj.title
-$loop$: $article-list.blog-info-list as $obj
-src: $obj.src
+-- end: ftd.row
+
+-- ftd.image:
+src: $article-nav-wrapper.right-arrow-icon
 
 -- end: ftd.row
 
 -- end: ftd.column
 
--- end: ftd.column
+-- end: article-nav-wrapper
 
--- end: article-list
 
+
+
+
+
+
+
+
+-- component article-nav:
+integer index: 1
+boolean $active: false
+string page-index:
+
+-- ftd.row:
+$on-click$: $ftd.toggle($a = $article-nav.active)
+$on-click$: $ftd.set-integer($a = $current-page, v = $article-nav.index)
+color if { article-nav.active }: $inherited.colors.custom.one
+
+-- ftd.text: $article-nav.page-index
+
+-- end: ftd.row
+
+-- end: article-nav
 
 
 
@@ -1622,8 +1800,420 @@ src: $featured-article.src
 
 
 
+-- component featured-articles-container:
+caption title:
+article-info list article-info-list:
+integer width: $width
+
+-- ftd.column:
+align-content: center
+width: fill-container
+
+-- ftd.column:
+align-self: center
+max-width.fixed.px: $featured-articles-container.width
+width: fill-container
+padding-top.px: 124
+padding-bottom.px: 50
+
+-- ftd.text: $featured-articles-container.title
+color: $inherited.colors.text
+role: $inherited.types.heading-large
+
+-- ftd.row:
+wrap: true
+spacing.fixed.px: 24
+margin-top.px: 72
+
+-- featured-article: $obj.title
+$loop$: $featured-articles-container.article-info-list as $obj
+src: $obj.src
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: featured-articles-container
 
 
--- record blog-info:
+
+
+
+
+
+
+
+-- component main-container:
+integer width: $width
+children slider-items:
+string id:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+id: $main-container.id
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $main-container.width
+align-content: center
+padding-bottom.px: 50
+
+-- ftd.column:
+width: fill-container
+align-content: center
+children: $main-container.slider-items
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: main-container
+
+
+
+
+
+
+-- record article-info:
 caption title:
 ftd.image-src src:
+
+
+
+
+
+
+
+
+
+-- component user:
+caption title:
+body body:
+ftd.image-src src:
+
+-- ftd.column:
+
+-- ftd.row:
+spacing.fixed.px: 16
+
+-- ftd.image:
+src: $user.src
+
+-- ftd.column:
+
+-- ftd.text: $user.title
+role: $inherited.types.blockquote
+color: $inherited.colors.text
+
+-- ftd.text:
+role: $inherited.types.fine-print
+color: $inherited.colors.text
+
+$user.body
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: user
+
+
+
+
+
+
+
+
+
+
+-- component blog-section:
+caption title:
+para list paragraphs:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.text: $blog-section.title
+color: $inherited.colors.text
+role: $inherited.types.heading-small
+
+-- para-wrapper:
+paras: $blog-section.paragraphs
+
+-- end: ftd.column
+
+-- end: blog-section
+
+
+
+
+
+
+
+
+
+-- component blog-sections-wrapper:
+children blog-section:
+decimal width:
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.percent: $blog-sections-wrapper.width
+
+-- ftd.column:
+spacing.fixed.px: 60
+width: fill-container
+padding.px: 50
+children: $blog-sections-wrapper.blog-section
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: blog-sections-wrapper
+
+
+
+
+
+
+
+
+
+
+-- component paragraph:
+body body:
+
+-- ftd.text:
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+
+$paragraph.body
+
+-- end: paragraph
+
+
+
+
+
+
+
+
+
+-- component para-wrapper:
+para list paras:
+
+-- ftd.column:
+width: fill-container
+padding-vertical.px: 18
+
+-- paragraph:
+$loop$: $para-wrapper.paras as $para
+body: $para.body
+
+-- end: ftd.column
+
+-- end: para-wrapper
+
+
+
+
+
+
+
+-- record para:
+body body:
+
+
+
+
+
+
+
+
+
+-- component col:
+decimal width:
+children child: 
+integer padding-horizontal: 0
+integer child-spacing: 0
+
+-- ftd.column:
+width.fixed.percent: $col.width
+
+-- ftd.column:
+padding-horizontal.px: $col.padding-horizontal
+spacing.fixed.px: $col.child-spacing
+children: $col.child
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: col
+
+
+
+
+
+
+
+
+
+-- component page-wrapper:
+integer width:
+children page-sections:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $page-wrapper.width
+padding-horizontal.px: 40
+padding-top.px: 50
+
+-- ftd.row:
+children: $page-wrapper.page-sections
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: page-wrapper
+
+
+
+
+
+
+
+
+
+-- component card1:
+caption title:
+integer padding-vertical: 20
+integer padding-horizontal: 50
+integer margin-top: 20
+body body:
+ftd.color bg-color: $inherited.colors.background.step-2
+
+-- ftd.column:
+padding-vertical.px: $card1.padding-vertical
+padding-horizontal.px: $card1.padding-horizontal
+background.solid: $card1.bg-color
+margin-top.px: $card1.margin-top
+width: fill-container
+
+-- ftd.text: $card1.title
+role: $inherited.types.heading-tiny
+color: $inherited.colors.text
+
+-- ftd.text:
+role: $inherited.types.fine-print
+color: $inherited.colors.accent.primary
+margin-top.px: 15
+
+$card1.body
+
+-- end: ftd.column
+
+-- end: card1
+
+
+
+
+
+
+
+
+
+
+-- component document-dropdown: 
+caption title: 
+body body: 
+boolean $open: false
+ftd.image-src src:
+
+-- ftd.column:
+width: fill-container
+margin-top.px: 30
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.row: 
+width: fill-container
+spacing.fixed.px: 15
+$on-click$: $ftd.toggle($a = $document-dropdown.open)
+align-content: center
+
+-- ftd.image: 
+src: $document-dropdown.src
+;;if: { document-dropdown.open }
+
+-- ftd.text: $document-dropdown.title
+role: $inherited.types.heading-tiny
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- ftd.text: $document-dropdown.body
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+if: {document-dropdown.open}
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: document-dropdown
+
+
+
+
+
+
+
+
+
+-- component left-sidebar:
+caption title:
+optional string sub-links1:
+optional string sub-links2:
+optional string sub-links3:
+optional string sub-links4:
+ftd.image-src arrow:
+document-record list list-of-navs:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.column:
+
+-- document-dropdown: $nav.title
+$loop$: $left-sidebar.list-of-navs as $nav
+body: $nav.body
+src: $left-sidebar.arrow
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: left-sidebar
+
+
+
+
+-- record document-record:
+caption title:
+body body:

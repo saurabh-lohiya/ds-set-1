@@ -2,34 +2,126 @@
 -- import: fifthtry.github.io/ds-set-1/assets
 
 -- lp.page:
+brand-name: Fastn
+header-width: 1440
 
--- lp.header: Fastn
-$width: 1440
-
--- lp.blog-hero: Morbi eu risus nulla. Aliquam erat volutp nullam vitae ex id justo modo facilisis.
-blogDate: 15 Sep, 2021
-likes: 2719
-comments: 273
-designation: UI Designer
+-- lp.article-hero: Morbi eu risus nulla. Aliquam erat volutp nullam vitae ex id justo modo facilisis.
+date: 15 Sep, 2021
+likes: 2719 like
+comments: 273 comment
+author-profile: UI Designer
 author: Patrika AVA
 src: $assets.files.assets.blog-hero-img.png
+author-icon: $assets.files.assets.patrica.png
+date-icon: $assets.files.assets.calendar.svg
+likes-icon: $assets.files.assets.likes.svg
+comments-icon: $assets.files.assets.comments.svg
 
 Aenean interdum arcu sit amet nulla lacinia suscipit. Vivamus at laoreet mi. Fusce pulvinar commodo ligula, et egestas dolor. Ut hendrerit blandit neque in tempor.
 
--- end: lp.blog-hero
+-- end: lp.article-hero
 
--- lp.article-list: Latest Blogs
-blog-info-list: $blog-info-list
+;;-- lp.article-list: Latest Blogs
+;;article-info-list: $article-info-list
+;;
+;;-- end: lp.article-list
 
--- end: lp.article-list
+-- lp.main-container:
+id: main-container-parent
 
--- lp.signup: Freakishly simple. Downright useful. Ready to make the jump?
+-- lp.article-wrapper:
+index: 1
+reset: $lp.current-page
+
+-- lp.featured-articles-container: Latest Blogs
+article-info-list: $article-info-list
+
+-- end: lp.featured-articles-container
+
+-- end: lp.article-wrapper
+
+-- lp.article-wrapper:
+index: 2
+reset: $lp.current-page
+
+-- lp.featured-articles-container: Latest Blogs
+article-info-list: $article-info-list
+
+-- end: lp.featured-articles-container
+
+-- end: lp.article-wrapper
+
+-- lp.article-wrapper:
+index: 3
+reset: $lp.current-page
+
+-- lp.featured-articles-container: Latest Blogs
+article-info-list: $article-info-list
+
+-- end: lp.featured-articles-container
+
+-- end: lp.article-wrapper
+
+-- lp.article-wrapper:
+index: 4
+reset: $lp.current-page
+
+-- lp.featured-articles-container: Latest Blogs
+article-info-list: $article-info-list
+
+-- end: lp.featured-articles-container
+
+-- end: lp.article-wrapper
+
+-- lp.article-wrapper:
+index: 5
+reset: $lp.current-page
+
+-- lp.featured-articles-container: Latest Blogs
+article-info-list: $article-info-list
+
+-- end: lp.featured-articles-container
+
+-- end: lp.article-wrapper
+
+-- lp.article-nav-wrapper:
+parent-id: main-container-parent
+left-arrow-icon: $assets.files.assets.right-arrow-icon.svg
+right-arrow-icon: $assets.files.assets.right-arrow-icon.svg
+
+-- lp.article-nav:
+$active: true
+index: 1
+page-index: 1
+
+-- lp.article-nav:
+index: 2
+page-index: 2
+
+-- lp.article-nav:
+index: 3
+page-index: 3
+
+-- lp.article-nav:
+index: 4
+page-index: 4
+
+-- lp.article-nav:
+index: 5
+page-index: 5
+
+-- end: lp.article-nav-wrapper
+
+-- end: lp.main-container
+
+
+-- lp.newsletter: Freakishly simple. Downright useful. Ready to make the jump?
 cta-placeholder: Enter your work email...
 cta-label: Sign me up
 info: Sign up in 2 minutes
-src: $assets.files.assets.okay.svg
+info-icon: $assets.files.assets.okay.svg
 
--- end: lp.signup
+-- end: lp.newsletter
 
 -- lp.footer:
 
@@ -88,42 +180,42 @@ link5: Footer link 5
 
 
 
--- $lp.blog-info list blog-info-list:
+-- $lp.article-info list article-info-list:
 
--- $lp.blog-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+-- $lp.article-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
 src: $assets.files.assets.blog02.png
 
--- $lp.blog-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+-- $lp.article-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
 src: $assets.files.assets.blog02.png
 
--- $lp.blog-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+-- $lp.article-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
 src: $assets.files.assets.blog02.png
 
--- $lp.blog-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+-- $lp.article-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
 src: $assets.files.assets.blog02.png
 
--- $lp.blog-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+-- $lp.article-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
 src: $assets.files.assets.blog02.png
 
--- $lp.blog-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+-- $lp.article-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
 src: $assets.files.assets.blog02.png
 
--- $lp.blog-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+-- $lp.article-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
 src: $assets.files.assets.blog02.png
 
--- $lp.blog-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+-- $lp.article-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
 src: $assets.files.assets.blog02.png
 
--- $lp.blog-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+-- $lp.article-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
 src: $assets.files.assets.blog02.png
 
--- $lp.blog-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+-- $lp.article-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
 src: $assets.files.assets.blog02.png
 
--- $lp.blog-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+-- $lp.article-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
 src: $assets.files.assets.blog02.png
 
--- $lp.blog-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+-- $lp.article-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
 src: $assets.files.assets.blog02.png
 
--- end: blog-info-list
+-- end: article-info-list

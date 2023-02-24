@@ -1,0 +1,223 @@
+-- import: typo
+-- import: cs
+-- import: fastn/processors as pr
+
+-- import: fifthtry.github.io/ds-set-1/assets
+
+
+
+
+
+
+-- component article-wrapper:
+optional integer index:
+optional integer reset:
+children slide:
+
+-- ftd.column:
+if : { article-wrapper.index == article-wrapper.reset }
+width: fill-container
+align-content: center
+children: $article-wrapper.slide
+
+-- end: ftd.column
+
+-- end: article-wrapper
+
+
+
+
+
+
+
+
+
+
+-- component article-nav-wrapper:
+children article-nav:
+string parent-id:
+ftd.image-src left-arrow-icon:
+ftd.image-src right-arrow-icon:
+
+-- ftd.column:
+
+-- ftd.row: 
+spacing.fixed.px: 20
+
+-- ftd.image:
+src: $article-nav-wrapper.left-arrow-icon
+
+-- ftd.row:
+spacing.fixed.px: 10
+children: $article-nav-wrapper.article-nav
+
+-- end: ftd.row
+
+-- ftd.image:
+src: $article-nav-wrapper.right-arrow-icon
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: article-nav-wrapper
+
+
+
+
+
+
+
+
+
+-- component article-nav:
+integer index: 1
+boolean $active: false
+string page-index:
+
+-- ftd.row:
+$on-click$: $ftd.toggle($a = $article-nav.active)
+$on-click$: $ftd.set-integer($a = $current-page, v = $article-nav.index)
+color if { article-nav.active }: $inherited.colors.custom.one
+
+-- ftd.text: $article-nav.page-index
+
+-- end: ftd.row
+
+-- end: article-nav
+
+
+
+
+
+
+
+
+
+-- component featured-article:
+caption title:
+ftd.image-src src:
+
+-- ftd.column:
+
+-- ftd.column:
+anchor: parent
+left.px: 32
+bottom.px: 54
+
+-- ftd.text: $featured-article.title
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+
+-- end: ftd.column
+
+ 
+-- ftd.column:
+anchor: parent
+left.px: 32
+bottom.px: 16
+
+-- ftd.text: Read more ->
+color: $inherited.colors.cta-primary.base
+role: $inherited.types.button-small
+
+-- end: ftd.column
+
+-- ftd.image:
+width.fixed.px: 375
+src: $featured-article.src
+
+-- end: ftd.column
+
+-- end: featured-article
+
+
+
+
+
+
+
+
+
+-- component featured-articles-container:
+caption title:
+article-info list article-info-list:
+integer width: $width
+
+-- ftd.column:
+align-content: center
+width: fill-container
+
+-- ftd.column:
+align-self: center
+max-width.fixed.px: $featured-articles-container.width
+width: fill-container
+padding-top.px: 124
+padding-bottom.px: 50
+
+-- ftd.text: $featured-articles-container.title
+color: $inherited.colors.text
+role: $inherited.types.heading-large
+
+-- ftd.row:
+wrap: true
+spacing.fixed.px: 24
+margin-top.px: 72
+
+-- featured-article: $obj.title
+$loop$: $featured-articles-container.article-info-list as $obj
+src: $obj.src
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: featured-articles-container
+
+
+
+
+
+
+
+
+
+-- component main-container:
+integer width: $width
+children slider-items:
+string id:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+id: $main-container.id
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $main-container.width
+align-content: center
+padding-bottom.px: 50
+
+-- ftd.column:
+width: fill-container
+align-content: center
+children: $main-container.slider-items
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: main-container
+
+
+
+
+
+
+-- record article-info:
+caption title:
+ftd.image-src src:
