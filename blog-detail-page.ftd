@@ -231,6 +231,26 @@ src: $assets.files.assets.code.png
 
 -- end: lp.page-wrapper
 
+-- lp.br:
+
+-- end: lp.br
+
+-- lp.featured-articles-container: More Blogs
+article-info-list: $article-info-list
+paddingTop: 0
+
+-- end: lp.featured-articles-container
+
+-- lp.newsletter: Freakishly simple. Downright useful. Ready to make the jump?
+cta-placeholder: Enter your work email...
+cta-label: Sign me up
+info: Sign up in 2 minutes
+info-icon: $assets.files.assets.okay.svg
+bg-color: $inherited.colors.background.base
+
+-- end: lp.newsletter
+
+
 -- end: lp.page
 
 
@@ -326,3 +346,24 @@ profile: UI Designer
 -- lp.unordList: - Unordered lists are displayed with a preceding bullet point.
 
 -- end: unord-list3
+
+
+
+
+
+
+
+
+
+-- $lp.article-info list article-info-list:
+
+-- $lp.article-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+src: $assets.files.assets.blog02.png
+
+-- $lp.article-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+src: $assets.files.assets.blog02.png
+
+-- $lp.article-info: Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.
+src: $assets.files.assets.blog02.png
+
+-- end: article-info-list

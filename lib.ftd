@@ -503,11 +503,12 @@ optional string info:
 optional ftd.image-src cta-icon:
 optional ftd.image-src info-icon:
 integer width: $width
+ftd.color bg-color: $inherited.colors.custom.four
 
 -- ftd.column:
 width: fill-container
 align-content: center
-background.solid: $inherited.colors.custom.four
+background.solid: $newsletter.bg-color
 
 -- ftd.row:
 max-width.fixed.px: $newsletter.width
@@ -1916,6 +1917,7 @@ src: $featured-article.src
 caption title:
 article-info list article-info-list:
 integer width: $width
+integer paddingTop: 0
 
 -- ftd.column:
 align-content: center
@@ -1925,7 +1927,7 @@ width: fill-container
 align-self: center
 max-width.fixed.px: $featured-articles-container.width
 width: fill-container
-padding-top.px: 124
+padding-top.px: $featured-articles-container.paddingTop
 padding-bottom.px: 50
 
 -- ftd.text: $featured-articles-container.title
@@ -2732,3 +2734,26 @@ color: $inherited.colors.text
 
 -- record unordList:
 caption title:
+
+
+
+
+
+
+
+
+
+
+-- component br:
+integer width: $width
+
+-- ftd.column:
+width: fill-container
+border-width.px: 1
+border-color: $inherited.colors.border-strong
+margin-vertical.px: 50
+max-width.fixed.px: $br.width
+
+-- end: ftd.column
+
+-- end: br
