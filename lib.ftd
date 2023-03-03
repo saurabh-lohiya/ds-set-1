@@ -39,6 +39,7 @@ optional ftd.image-src icon2:
 optional ftd.image-src icon3:
 optional ftd.image-src icon4:
 optional ftd.image-src avatar:
+boolean breadcrumbs: false
 
 -- ftd.column:
 width: fill-container
@@ -72,6 +73,13 @@ icon4: $page.icon4
 avatar: $page.avatar
 
 -- end: header
+
+
+-- breadcrumbs:
+if: { page.breadcrumbs }
+width: 1440
+
+-- end: breadcrumbs
 
 -- ftd.text: $page.title
 if: { $page.title != NULL }
@@ -2757,3 +2765,62 @@ max-width.fixed.px: $br.width
 -- end: ftd.column
 
 -- end: br
+
+
+
+
+
+
+
+
+
+-- component breadcrumbs:
+integer width: $width
+
+-- ftd.column: 
+width: fill-container
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 10
+max-width.fixed.px: $breadcrumbs.width
+padding-left.px: 50
+padding-top.px: 50
+ 
+-- ftd.text: Breadcrumbs
+role: $inherited.types.label-large
+color: $inherited.colors.text
+align-self: center
+
+-- ftd.image:
+src: $assets.files.assets.right-arrow-icon.svg
+align-self: center
+
+-- ftd.text: Breadcrumbs
+role: $inherited.types.label-large
+color: $inherited.colors.text
+align-self: center
+
+-- ftd.image:
+src: $assets.files.assets.right-arrow-icon.svg
+align-self: center
+
+-- ftd.text: Breadcrumbs
+role: $inherited.types.label-large
+color: $inherited.colors.text
+align-self: center
+
+-- ftd.image:
+src: $assets.files.assets.right-arrow-icon.svg
+align-self: center
+
+-- ftd.text: Breadcrumbs
+role: $inherited.types.label-large
+color: $inherited.colors.accent.primary
+align-self: center
+
+-- end: ftd.row
+
+-- end: ftd.column 
+
+-- end: breadcrumbs

@@ -12,6 +12,7 @@ icon2: $assets.files.assets.notifications-icon.svg
 icon3: $assets.files.assets.shopping_cart-icon.svg
 icon4: $assets.files.assets.search-icon.svg
 avatar: $assets.files.assets.patrica.png
+breadcrumbs: true
 
 -- lp.page-wrapper:
 width: 1440
