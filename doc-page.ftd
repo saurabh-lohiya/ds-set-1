@@ -1,0 +1,290 @@
+-- import: fifthtry.github.io/ds-set-1/lib as lp
+-- import: fifthtry.github.io/ds-set-1/assets
+
+
+
+-- lp.page: Documentation
+brand-name: Fastn
+header-width: 1440
+login: true
+icon1: $assets.files.assets.heart-icon.svg
+icon2: $assets.files.assets.notifications-icon.svg
+icon3: $assets.files.assets.shopping_cart-icon.svg
+icon4: $assets.files.assets.search-icon.svg
+avatar: $assets.files.assets.patrica.png
+
+-- lp.page-wrapper:
+width: 1440
+
+-- lp.col:
+width: 22.22
+padding-horizontal: 24
+
+-- lp.left-sidebar: hello
+arrow: $assets.files.assets.right-arrow-icon.svg
+list-of-navs: $list-of-navs
+
+-- end: lp.col
+
+-- lp.col:
+width: 48.125
+padding-horizontal: 50
+
+-- lp.blog-sections-wrapper:
+
+-- lp.blog-section: Introduction to Fastn
+
+-- lp.paragraph:
+
+Our suite of products are open source and available on Github. You are free to download install and customize them to your needs.We’d love to hear your feedback and suggestions, and collectively make Documentation easier and better for everyone.
+
+-- end: lp.paragraph
+
+-- lp.paragraph:
+
+We enable teams to iterate quickly and develop, preview, and ship delightful user experiences. Fastn has zero-configuration support for 35+ frontend frameworks and integrates with your headless content, commerce, or database of choice.
+
+-- end: lp.paragraph
+
+-- end: lp.blog-section
+
+-- lp.blog-section: Creating a personal account
+
+-- lp.paragraph:
+
+Our suite of products are open source and available on Github. You are free to download install and customize them to your needs.We’d love to hear your feedback and suggestions, and collectively make Documentation easier and better for everyone.
+
+-- end: lp.paragraph
+
+-- lp.paragraph:
+
+We enable teams to iterate quickly and develop, preview, and ship delightful user experiences. Fastn has zero-configuration support for 35+ frontend frameworks and integrates with your headless content, commerce, or database of choice.
+
+-- end: lp.paragraph
+
+-- lp.card-container:
+
+-- lp.card2: Title
+cta-label: Button
+src: $assets.files.assets.dollar.svg
+
+Write Something Here
+
+-- end: lp.card2
+
+-- lp.card2: Title
+cta-label: Button
+src: $assets.files.assets.dollar.svg
+
+Write Something Here
+
+-- end: lp.card2
+
+-- end: lp.card-container
+
+-- lp.doc-image:
+src: $assets.files.assets.code.png
+
+-- end: lp.doc-image
+
+-- end: lp.blog-section
+
+-- lp.blog-section: Creating a personal account
+
+-- lp.paragraph:
+
+Our suite of products are open source and available on Github. You are free to download install and customize them to your needs.We’d love to hear your feedback and suggestions, and collectively make Documentation easier and better for everyone.
+
+-- end: lp.paragraph
+
+-- lp.paragraph:
+
+We enable teams to iterate quickly and develop, preview, and ship delightful user experiences. Fastn has zero-configuration support for 35+ frontend frameworks and integrates with your headless content, commerce, or database of choice.
+
+-- end: lp.paragraph
+
+-- lp.doc-code: \-- ftd.row
+
+npx create-docusaurus@latest my-website classic
+
+-- end: lp.doc-code
+
+-- lp.toast: Important
+toast-icon: $assets.files.assets.important.svg
+
+Please note that some functionality (for example, anchor links) will not work in development. The functionality will work as expected in production.
+
+-- end: lp.toast
+
+-- lp.toast: Important
+toast-icon: $assets.files.assets.important.svg
+
+Please note that some functionality (for example, anchor links) will not work in development. The functionality will work as expected in production.
+
+-- end: lp.toast
+
+-- end: lp.blog-section
+
+-- lp.blog-section: Creating a personal account
+
+-- lp.paragraph:
+
+Our suite of products are open source and available on Github. You are free to download install and customize them to your needs.We’d love to hear your feedback and suggestions, and collectively make Documentation easier and better for everyone.
+
+-- end: lp.paragraph
+
+-- lp.paragraph:
+
+We enable teams to iterate quickly and develop, preview, and ship delightful user experiences. Fastn has zero-configuration support for 35+ frontend frameworks and integrates with your headless content, commerce, or database of choice.
+
+-- end: lp.paragraph
+
+-- lp.doc-code: \-- ftd.row
+
+npx create-docusaurus@latest my-website classic
+
+-- end: lp.doc-code
+
+-- end: lp.blog-section
+
+-- lp.blog-section: Creating a personal account
+
+-- lp.paragraph:
+
+Our suite of products are open source and available on Github. You are free to download install and customize them to your needs.We’d love to hear your feedback and suggestions, and collectively make Documentation easier and better for everyone.
+
+-- end: lp.paragraph
+
+-- lp.paragraph:
+
+We enable teams to iterate quickly and develop, preview, and ship delightful user experiences. Fastn has zero-configuration support for 35+ frontend frameworks and integrates with your headless content, commerce, or database of choice.
+
+-- end: lp.paragraph
+
+
+-- lp.doc-image:
+src: $assets.files.assets.code.png
+
+-- end: lp.doc-image
+
+-- lp.doc-code: \-- ftd.row
+
+npx create-docusaurus@latest my-website classic
+
+-- end: lp.doc-code
+
+-- end: lp.blog-section
+
+-- lp.blog-section: Creating a personal account
+
+-- lp.paragraph:
+
+Our suite of products are open source and available on Github. You are free to download install and customize them to your needs.We’d love to hear your feedback and suggestions, and collectively make Documentation easier and better for everyone.
+
+-- end: lp.paragraph
+
+-- lp.paragraph:
+
+We enable teams to iterate quickly and develop, preview, and ship delightful user experiences. Fastn has zero-configuration support for 35+ frontend frameworks and integrates with your headless content, commerce, or database of choice.
+
+-- end: lp.paragraph
+
+-- lp.doc-code: \-- ftd.row
+
+npx create-docusaurus@latest my-website classic
+
+-- end: lp.doc-code
+
+-- end: lp.blog-section
+
+-- lp.blog-section: Creating a personal account
+
+-- lp.paragraph:
+
+Our suite of products are open source and available on Github. You are free to download install and customize them to your needs.We’d love to hear your feedback and suggestions, and collectively make Documentation easier and better for everyone.
+
+-- end: lp.paragraph
+
+-- lp.paragraph:
+
+We enable teams to iterate quickly and develop, preview, and ship delightful user experiences. Fastn has zero-configuration support for 35+ frontend frameworks and integrates with your headless content, commerce, or database of choice.
+
+-- end: lp.paragraph
+
+-- lp.doc-image:
+src: $assets.files.assets.code.png
+
+-- end: lp.doc-image
+
+-- lp.doc-code: \-- ftd.row
+
+npx create-docusaurus@latest my-website classic
+
+-- end: lp.doc-code
+
+-- end: lp.blog-section
+
+-- lp.blog-section: Creating a personal account
+
+-- lp.paragraph:
+
+Our suite of products are open source and available on Github. You are free to download install and customize them to your needs.We’d love to hear your feedback and suggestions, and collectively make Documentation easier and better for everyone.
+
+-- end: lp.paragraph
+
+-- lp.paragraph:
+
+We enable teams to iterate quickly and develop, preview, and ship delightful user experiences. Fastn has zero-configuration support for 35+ frontend frameworks and integrates with your headless content, commerce, or database of choice.
+
+-- end: lp.paragraph
+
+-- end: lp.blog-section
+
+-- end: lp.blog-sections-wrapper
+
+-- end: lp.col
+
+
+-- lp.col:
+width: 29.65
+padding-horizontal: 24
+
+-- end: lp.col
+
+-- end: lp.page-wrapper
+
+-- end: lp.page
+
+
+
+
+
+
+
+
+
+
+
+-- $lp.document-record list list-of-navs:
+
+-- $lp.document-record: Home
+
+this is body
+
+-- $lp.document-record: Pocket
+
+this is body
+
+-- $lp.document-record: History
+
+this is body
+
+-- $lp.document-record: Service
+
+this is body
+
+-- $lp.document-record: Saved
+
+this is body
+
+-- end: list-of-navs

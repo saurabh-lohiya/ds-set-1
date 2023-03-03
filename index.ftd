@@ -5,6 +5,12 @@
 -- lp.page:
 header-width: 1440
 brand-name: Fastn
+login: false
+icon1: $assets.files.assets.heart-icon.svg
+icon2: $assets.files.assets.notifications-icon.svg
+icon3: $assets.files.assets.shopping_cart-icon.svg
+icon4: $assets.files.assets.search-icon.svg
+avatar: $assets.files.assets.patrica.png
 
 -- lp.dashboard: Instant, fee-free payments for small business.
 info: Pay and get paid in real-time with zero fees. Secure, streamlined, and super fast.
@@ -146,52 +152,6 @@ info: Sign up in 2 minutes
 info-icon: $assets.files.assets.okay.svg
 
 -- end: lp.newsletter
-
--- lp.footer:
-
--- lp.footer-child1: Fastn
-info: Stay in touch with everything you need
-copyright: Copyright ©2022. Fastn Inc.
-src1: $assets.files.assets.meta.svg
-src2: $assets.files.assets.figma.svg
-src3: $assets.files.assets.google.svg
-src4: $assets.files.assets.tweak.svg
-src5: $assets.files.assets.ball.svg
-
--- end: lp.footer-child1
-
--- lp.footer-wrapper:
-
--- lp.footer-child2: Heading2
-link1: Footer link 1
-link2: Footer link 2
-link3: Footer link 3
-link4: Footer link 4
-link5: Footer link 5
-
--- end: lp.footer-child2
-
--- lp.footer-child2: Heading3
-link1: Footer link 1
-link2: Footer link 2
-link3: Footer link 3
-link4: Footer link 4
-link5: Footer link 5
-
--- end: lp.footer-child2
-
--- lp.footer-child2: Heading4
-link1: Footer link 1
-link2: Footer link 2
-link3: Footer link 3
-link4: Footer link 4
-link5: Footer link 5
-
--- end: lp.footer-child2
-
--- end: lp.footer-wrapper
-
--- end: lp.footer
 
 -- end: lp.page
 

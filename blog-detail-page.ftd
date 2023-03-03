@@ -1,0 +1,328 @@
+-- import: fifthtry.github.io/ds-set-1/lib as lp
+-- import: fifthtry.github.io/ds-set-1/assets
+
+
+
+-- lp.page:
+brand-name: Fastn
+header-width: 1440
+login: true
+icon1: $assets.files.assets.heart-icon.svg
+icon2: $assets.files.assets.notifications-icon.svg
+icon3: $assets.files.assets.shopping_cart-icon.svg
+icon4: $assets.files.assets.search-icon.svg
+avatar: $assets.files.assets.patrica.png
+
+
+-- lp.page-wrapper:
+width: 1180
+
+-- lp.post:
+meta: $post-data
+list-of-socials: $list-of-socials
+
+-- lp.blog-section: Introduction to Fastn
+
+-- lp.paragraph:
+marginTop: 20
+
+For the past year, our team has been working to bring instant, fee-free payments to the small business community. This first-of-its-kind financial tool can help small businesses earn more while making them less vulnerable to long processing times.
+
+-- end: lp.paragraph
+
+-- lp.paragraph:
+marginTop: 38
+
+With a single point of view, Flex integrates customer data and marketing tools in one flexible cloud platform that lets you get business results wherever they show up.  Flex is the only saas business platform that lets you run your business on one platform, seamlessly across all digital channels.
+
+-- end: lp.paragraph
+
+-- lp.paragraph:
+
+With a single point of view, Flex integrates customer data and marketing tools in one flexible cloud platform that lets you get business results wherever they show up.  Flex is the only saas business platform that lets you run your business on one platform, seamlessly across all digital channels.
+
+-- end: lp.paragraph
+
+-- lp.paragraph:
+
+Flex is the only saas business platform that lets you run your business on one platform.
+
+-- end: lp.paragraph
+
+-- lp.paragraph:
+marginTop: 38
+
+With a single point of view, Flex integrates customer data and marketing tools in one flexible cloud platform that lets you get business results wherever they show up.  Flex is the only saas business platform that lets you run your business on one platform, seamlessly across all digital channels.
+
+-- end: lp.paragraph
+
+-- lp.paragraph:
+
+With a single point of view, Flex integrates customer data and marketing tools in one flexible cloud platform that lets you get business results wherever they show up.  Flex is the only saas business platform that lets you run your business on one platform, seamlessly across all digital channels.
+
+-- end: lp.paragraph
+
+-- lp.paragraph:
+
+Flex is the only saas business platform that lets you run your business on one platform.
+
+-- end: lp.paragraph
+
+-- lp.paragraph:
+marginTop: 38
+
+With a single point of view, Flex integrates customer data and marketing tools in one flexible cloud platform that lets you get business results wherever they show up.  Flex is the only saas business platform that lets you run your business on one platform, seamlessly across all digital channels.
+
+-- end: lp.paragraph
+
+-- lp.unorderedList:
+unord-list: $unord-list1
+
+-- end: lp.unorderedList
+
+-- lp.doc-image:
+src: $assets.files.assets.code.png
+
+-- end: lp.doc-image
+
+-- lp.doc-image:
+src: $assets.files.assets.code.png
+
+-- end: lp.doc-image
+
+-- end: lp.blog-section
+
+-- lp.blog-section: Creating a personal account
+
+-- lp.paragraph:
+
+With a single point of view, Flex integrates customer data and marketing tools
+
+-- end: lp.paragraph
+
+-- lp.paragraph:
+marginTop: 38
+
+With a single point of view, Flex integrates customer data and marketing tools in one flexible cloud platform that lets you get business results wherever they show up.  Flex is the only saas business platform that lets you run your business on one platform, seamlessly across all digital channels.
+
+-- end: lp.paragraph
+
+-- lp.paragraph:
+
+With a single point of view, Flex integrates customer data and marketing tools in one flexible cloud platform that lets you get business results wherever they show up.  Flex is the only saas business platform that lets you run your business on one platform, seamlessly across all digital channels.
+
+-- end: lp.paragraph
+
+-- lp.paragraph:
+
+Flex is the only saas business platform that lets you run your business on one platform.
+
+-- end: lp.paragraph
+
+-- lp.doc-image:
+src: $assets.files.assets.code.png
+
+-- end: lp.doc-image
+
+-- end: lp.blog-section
+
+-- lp.blog-section: Creating a personal account
+
+-- lp.paragraph:
+
+With a single point of view, Flex integrates customer data and marketing tools
+
+-- end: lp.paragraph
+
+-- lp.unorderedList:
+unord-list: $unord-list2
+
+-- end: lp.unorderedList
+
+-- end: lp.blog-section
+
+
+-- lp.blog-section: Creating a personal account
+
+-- lp.paragraph:
+
+With a single point of view, Flex integrates customer data and marketing tools
+
+-- end: lp.paragraph
+
+-- lp.paragraph:
+marginTop: 38
+
+With a single point of view, Flex integrates customer data and marketing tools in one flexible cloud platform that lets you get business results wherever they show up.  Flex is the only saas business platform that lets you run your business on one platform, seamlessly across all digital channels.
+
+-- end: lp.paragraph
+
+-- lp.paragraph:
+
+With a single point of view, Flex integrates customer data and marketing tools in one flexible cloud platform that lets you get business results wherever they show up.  Flex is the only saas business platform that lets you run your business on one platform, seamlessly across all digital channels.
+
+-- end: lp.paragraph
+
+-- lp.paragraph:
+
+Flex is the only saas business platform that lets you run your business on one platform.
+
+-- end: lp.paragraph
+
+
+-- lp.unorderedList:
+unord-list: $unord-list2
+
+-- end: lp.unorderedList
+
+-- end: lp.blog-section
+
+-- lp.blog-section: Creating a personal account
+
+-- lp.paragraph:
+
+With a single point of view, Flex integrates customer data and marketing tools
+
+-- end: lp.paragraph
+
+-- lp.doc-image:
+src: $assets.files.assets.code.png
+
+-- end: lp.doc-image
+
+-- end: lp.blog-section
+
+
+-- lp.blog-section: Creating a personal account
+
+-- lp.paragraph:
+
+With a single point of view, Flex integrates customer data and marketing tools
+
+-- end: lp.paragraph
+
+-- lp.paragraph:
+marginTop: 38
+
+With a single point of view, Flex integrates customer data and marketing tools in one flexible cloud platform that lets you get business results wherever they show up.  Flex is the only saas business platform that lets you run your business on one platform, seamlessly across all digital channels.
+
+-- end: lp.paragraph
+
+-- lp.paragraph:
+
+With a single point of view, Flex integrates customer data and marketing tools in one flexible cloud platform that lets you get business results wherever they show up.  Flex is the only saas business platform that lets you run your business on one platform, seamlessly across all digital channels.
+
+-- end: lp.paragraph
+
+-- lp.paragraph:
+
+Flex is the only saas business platform that lets you run your business on one platform.
+
+-- end: lp.paragraph
+
+-- lp.doc-image:
+src: $assets.files.assets.code.png
+
+-- end: lp.doc-image
+
+-- end: lp.blog-section
+
+-- end: lp.post
+
+-- end: lp.page-wrapper
+
+-- end: lp.page
+
+
+
+
+
+
+
+
+
+-- $lp.social list list-of-socials:
+
+-- $lp.social: Facebook
+link: facebook.com
+icon: $assets.files.assets.meta.svg
+
+-- $lp.social: Google
+link: facebook.com
+icon: $assets.files.assets.google.svg
+
+-- $lp.social: Tweak
+link: facebook.com
+icon: $assets.files.assets.tweak.svg
+
+-- $lp.social: Ball
+link: facebook.com
+icon: $assets.files.assets.ball.svg
+
+-- end: list-of-socials
+
+
+
+
+
+
+
+
+-- $lp.post-meta post-data: Fastn is officially open for business
+post-image: $assets.files.assets.post-banner.png
+published-on: 01 March 2023
+author: $author-details
+
+
+-- $lp.author-meta author-details: Patrica AV
+image: $assets.files.assets.patrica.png
+profile: UI Designer
+
+
+-- $lp.unordList list unord-list1:
+
+-- lp.unordList: - Unordered lists are displayed with a preceding bullet point.
+
+-- lp.unordList: - Unordered lists are displayed with a preceding bullet point.
+
+-- lp.unordList: - Unordered lists are displayed with a preceding bullet point.
+
+-- lp.unordList: - Unordered lists are displayed with a preceding bullet point.
+
+-- lp.unordList: - Unordered lists are displayed with a preceding bullet point.
+
+-- lp.unordList: - Unordered lists are displayed with a preceding bullet point.
+
+-- end: unord-list1
+
+-- $lp.unordList list unord-list2:
+
+-- lp.unordList: - Unordered lists are displayed with a preceding bullet point.
+
+-- lp.unordList: - Unordered lists are displayed with a preceding bullet point.
+
+-- lp.unordList: - Unordered lists are displayed with a preceding bullet point.
+
+-- lp.unordList: - Unordered lists are displayed with a preceding bullet point.
+
+-- lp.unordList: - Unordered lists are displayed with a preceding bullet point.
+
+-- lp.unordList: - Unordered lists are displayed with a preceding bullet point.
+
+-- end: unord-list2
+
+-- $lp.unordList list unord-list3:
+
+-- lp.unordList: - Unordered lists are displayed with a preceding bullet point.
+
+-- lp.unordList: - Unordered lists are displayed with a preceding bullet point.
+
+-- lp.unordList: - Unordered lists are displayed with a preceding bullet point.
+
+-- lp.unordList: - Unordered lists are displayed with a preceding bullet point.
+
+-- lp.unordList: - Unordered lists are displayed with a preceding bullet point.
+
+-- lp.unordList: - Unordered lists are displayed with a preceding bullet point.
+
+-- end: unord-list3

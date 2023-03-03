@@ -23,7 +23,6 @@ $processor$: pr.full-sitemap
 
 
 
-
 -- component page:
 optional caption title:
 optional body body:
@@ -34,6 +33,12 @@ ftd.type-data types: $typo.types
 ftd.color-scheme colors: $cs.main
 pr.toc-item list sections: $sitemap.sections
 integer header-width: $width
+boolean login: false
+optional ftd.image-src icon1:
+optional ftd.image-src icon2:
+optional ftd.image-src icon3:
+optional ftd.image-src icon4:
+optional ftd.image-src avatar:
 
 -- ftd.column:
 width: fill-container
@@ -58,7 +63,13 @@ align-self: center
 -- end: ftd.column
 
 -- header: $page.brand-name
+login: $page.login
 width: $page.header-width
+icon1: $page.icon1
+icon2: $page.icon2
+icon3: $page.icon3
+icon4: $page.icon4
+avatar: $page.avatar
 
 -- end: header
 
@@ -77,6 +88,52 @@ align-self: center
 children: $page.page-wrap
 
 -- end: ftd.column
+
+-- footer:
+
+-- footer-child1: Fastn
+info: Stay in touch with everything you need
+copyright: Copyright ©2022. Fastn Inc.
+src1: $assets.files.assets.meta.svg
+src2: $assets.files.assets.figma.svg
+src3: $assets.files.assets.google.svg
+src4: $assets.files.assets.tweak.svg
+src5: $assets.files.assets.ball.svg
+
+-- end: footer-child1
+
+-- footer-wrapper:
+
+-- footer-child2: Heading2
+link1: Footer link 1
+link2: Footer link 2
+link3: Footer link 3
+link4: Footer link 4
+link5: Footer link 5
+
+-- end: footer-child2
+
+-- footer-child2: Heading3
+link1: Footer link 1
+link2: Footer link 2
+link3: Footer link 3
+link4: Footer link 4
+link5: Footer link 5
+
+-- end: footer-child2
+
+-- footer-child2: Heading4
+link1: Footer link 1
+link2: Footer link 2
+link3: Footer link 3
+link4: Footer link 4
+link5: Footer link 5
+
+-- end: footer-child2
+
+-- end: footer-wrapper
+
+-- end: footer
 
 -- end: ftd.column
 
@@ -728,7 +785,12 @@ padding.px: 15
 caption brand-name:
 integer width: $width
 pr.toc-item list sections: $sitemap.sections
-
+boolean login: false
+ftd.image-src icon1:
+ftd.image-src icon2:
+ftd.image-src icon3:
+ftd.image-src icon4:
+ftd.image-src avatar:
 
 -- ftd.column:
 width: fill-container
@@ -736,7 +798,7 @@ background.solid: $inherited.colors.background.step-1
 align-content: center
 
 -- ftd.row:
-padding.px: 40
+padding.px: 28
 align-self: center
 width: fill-container
 max-width.fixed.px: $header.width
@@ -759,6 +821,7 @@ sections: $obj
 -- end: ftd.row
 
 -- ftd.row:
+if: { !header.login }
 spacing.fixed.px: 24
 align-self: end
 
@@ -766,6 +829,55 @@ align-self: end
 transparent: true
 
 -- cta-button: Sign Up
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { header.login }
+spacing.fixed.px: 32
+align-content: center
+
+-- ftd.text-input:
+placeholder: Hi
+padding.px: 15
+width.fixed.px: 240
+background.solid: transparent
+border-width.px: 1
+border-color: $inherited.colors.border-strong
+border-radius.px: 4
+color: $inherited.colors.text
+
+-- end: ftd.text-input
+
+-- ftd.row:
+spacing.fixed.px: 24
+
+-- ftd.image:
+src: $header.icon1
+width.fixed.px: 20
+height.fixed.px: 20
+
+-- ftd.image:
+src: $header.icon2
+width.fixed.px: 20
+height.fixed.px: 20
+
+-- ftd.image:
+src: $header.icon3
+width.fixed.px: 20
+height.fixed.px: 20
+
+-- ftd.image:
+src: $header.icon4
+width.fixed.px: 20
+height.fixed.px: 20
+
+-- end: ftd.row
+
+-- ftd.image:
+src: $header.avatar
+width.fixed.px: 48
+height.fixed.px: 48
 
 -- end: ftd.row
 
@@ -827,7 +939,7 @@ width.fixed.px: 180
 
 
 -- component clients-container:
-caption title:
+optional caption title:
 optional body body:
 integer $width: $width
 client-record list list-of-clients:
@@ -1895,8 +2007,10 @@ ftd.image-src src:
 caption title:
 body body:
 ftd.image-src src:
+integer marginTop: 0
 
 -- ftd.column:
+margin-top.px: $user.marginTop
 
 -- ftd.row:
 spacing.fixed.px: 16
@@ -1905,6 +2019,7 @@ spacing.fixed.px: 16
 src: $user.src
 
 -- ftd.column:
+align-self: center
 
 -- ftd.text: $user.title
 role: $inherited.types.blockquote
@@ -1935,7 +2050,7 @@ $user.body
 
 -- component blog-section:
 caption title:
-para list paragraphs:
+children child:
 
 -- ftd.column:
 width: fill-container
@@ -1944,8 +2059,11 @@ width: fill-container
 color: $inherited.colors.text
 role: $inherited.types.heading-small
 
--- para-wrapper:
-paras: $blog-section.paragraphs
+-- ftd.column:
+padding-vertical.px: 18
+children: $blog-section.child
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -1960,18 +2078,15 @@ paras: $blog-section.paragraphs
 
 
 -- component blog-sections-wrapper:
-children blog-section:
-decimal width:
+children child:
 
 -- ftd.column:
 width: fill-container
-max-width.fixed.percent: $blog-sections-wrapper.width
 
 -- ftd.column:
 spacing.fixed.px: 60
 width: fill-container
-padding.px: 50
-children: $blog-sections-wrapper.blog-section
+children: $blog-sections-wrapper.child
 
 -- end: ftd.column
 
@@ -1989,11 +2104,13 @@ children: $blog-sections-wrapper.blog-section
 
 
 -- component paragraph:
+integer marginTop: 0
 body body:
 
 -- ftd.text:
 color: $inherited.colors.text
 role: $inherited.types.copy-regular
+margin-top.px: $paragraph.marginTop
 
 $paragraph.body
 
@@ -2002,35 +2119,18 @@ $paragraph.body
 
 
 
-
-
-
-
-
--- component para-wrapper:
-para list paras:
-
--- ftd.column:
-width: fill-container
-padding-vertical.px: 18
-
--- paragraph:
-$loop$: $para-wrapper.paras as $para
-body: $para.body
-
--- end: ftd.column
-
--- end: para-wrapper
-
-
-
-
-
-
-
--- record para:
+-- component paragraph2:
+integer marginTop: 0
 body body:
 
+-- ftd.text:
+color: $inherited.colors.text
+role: $inherited.types.copy-small
+margin-top.px: $paragraph2.marginTop
+
+$paragraph2.body
+
+-- end: paragraph2
 
 
 
@@ -2047,6 +2147,7 @@ integer child-spacing: 0
 
 -- ftd.column:
 width.fixed.percent: $col.width
+;;border-width.px: 1
 
 -- ftd.column:
 padding-horizontal.px: $col.padding-horizontal
@@ -2069,19 +2170,23 @@ children: $col.child
 
 -- component page-wrapper:
 integer width:
-children page-sections:
+decimal childSpace: 0
+children child:
 
 -- ftd.column:
 width: fill-container
+align-content: center
 
 -- ftd.column:
 width: fill-container
 max-width.fixed.px: $page-wrapper.width
 padding-horizontal.px: 40
 padding-top.px: 50
+spacing.fixed.percent: $page-wrapper.childSpace
+align-content: center
 
 -- ftd.row:
-children: $page-wrapper.page-sections
+children: $page-wrapper.child
 
 -- end: ftd.row
 
@@ -2140,7 +2245,7 @@ $card1.body
 
 -- component document-dropdown: 
 caption title: 
-body body: 
+body body:
 boolean $open: false
 ftd.image-src src:
 
@@ -2151,7 +2256,7 @@ margin-top.px: 30
 -- ftd.column:
 width: fill-container
 
--- ftd.row: 
+-- ftd.row:
 width: fill-container
 spacing.fixed.px: 15
 $on-click$: $ftd.toggle($a = $document-dropdown.open)
@@ -2193,6 +2298,10 @@ optional string sub-links2:
 optional string sub-links3:
 optional string sub-links4:
 ftd.image-src arrow:
+;;ftd.image-src arrow:
+;;ftd.image-src arrow:
+;;ftd.image-src arrow:
+;;ftd.image-src arrow:
 document-record list list-of-navs:
 
 -- ftd.column:
@@ -2217,3 +2326,409 @@ src: $left-sidebar.arrow
 -- record document-record:
 caption title:
 body body:
+
+
+
+
+
+
+;;-- list home-submenu:
+;;string 
+;;-- end: home-submenu
+
+
+
+
+-- component language-wrapper:
+ftd.image-src lang-bg:
+children child:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.row:
+wrap: true
+children: $language-wrapper.child
+
+-- end: ftd.row
+
+-- ftd.image:
+src: $language-wrapper.lang-bg
+
+-- end: ftd.column
+
+-- end: language-wrapper
+
+
+
+
+
+
+
+
+
+
+-- component language:
+caption title:
+ftd.image-src lang-icon:
+boolean active: false
+
+-- ftd.column:
+min-width.fixed.px: 118
+border-bottom-width.px if { language.active }: 2
+border-color: $inherited.colors.border-strong
+spacing.fixed.px: 4
+align-content: center
+padding-bottom.px: 10
+align-self: end
+
+-- ftd.image: 
+src: $language.lang-icon
+
+-- ftd.text: $language.title
+role: $inherited.types.fine-print
+color: $inherited.colors.accent.primary
+
+-- end: ftd.column
+
+-- end: language
+
+
+
+
+
+
+
+
+
+
+-- component doc-code:
+caption title:
+body body:
+optional integer maginTop: 18
+
+-- ftd.column:
+padding-horizontal.px: 50
+padding-vertical.px: 20
+background.solid: $inherited.colors.background.step-1
+width: fill-container
+margin-top.px: $doc-code.maginTop
+
+-- ftd.text: $doc-code.title
+role: $inherited.types.heading-tiny
+color: $inherited.colors.text
+
+-- ftd.text: 
+color: $inherited.colors.cta-primary.base
+role: $inherited.types.copy-regular
+margin-top.px: 15
+
+$doc-code.body
+
+-- end: ftd.column
+
+-- end: doc-code
+
+
+
+
+
+
+
+
+
+-- component toast:
+caption title:
+body body:
+ftd.image-src toast-icon:
+ftd.color bg-color: $inherited.colors.success.text
+optional integer maginTop: 18
+
+-- ftd.column:
+background.solid: $toast.bg-color
+padding-vertical.px: 12
+border-radius.px: 8
+padding-right.px: 8
+margin-top.px: $toast.maginTop
+
+-- ftd.row:
+align-content: center
+
+-- ftd.image:
+src: $toast.toast-icon
+padding-right.px: 8
+padding-left.px: 16
+
+-- ftd.column:
+
+-- ftd.text: $toast.title
+role: $inherited.types.heading-tiny
+
+-- ftd.text: 
+role: $inherited.types.copy-small
+
+$toast.body
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: toast
+
+
+
+
+
+
+
+
+
+-- component doc-image:
+ftd.image-src src:
+
+-- ftd.column:
+margin-vertical.px: 20
+
+-- ftd.image:
+src: $doc-image.src
+width.fixed.percent: 100
+
+-- end: ftd.column
+
+-- end: doc-image
+
+
+
+
+
+
+
+
+
+-- component card2:
+ftd.image-src src:
+caption title:
+body body:
+string cta-label:
+
+
+-- ftd.column:
+padding-vertical.px: 32
+padding-horizontal.px: 24
+background.solid: $inherited.colors.background.step-2
+border-radius.px: 10
+width.fixed.percent: 46
+
+-- ftd.image:
+src: $card2.src
+
+-- ftd.text: $card2.title
+color: $inherited.colors.text-strong
+role: $inherited.types.heading-small
+margin-top.px: 8
+
+-- ftd.text:
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+margin-top.px: 8
+
+$card2.body
+
+-- ftd.column:
+margin-top.px: 32
+
+-- cta-button: $card2.cta-label
+
+-- end: cta-button
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: card2
+
+
+
+
+
+
+
+
+
+-- component card-container:
+children child:
+
+-- ftd.row:
+wrap: true
+margin-top.px: 20
+spacing.fixed.percent: 8
+width: fill-container
+children: $card-container.child
+
+-- end: ftd.row
+
+-- end: card-container
+
+
+
+
+
+
+
+
+
+-- component social-wrapper:
+caption title:
+social list list-of-socials:
+integer marginTop: 0
+
+-- ftd.column:
+margin-top.px: $social-wrapper.marginTop
+
+-- ftd.text: $social-wrapper.title
+role: $inherited.types.label-large
+color: $inherited.colors.text
+
+-- ftd.row:
+wrap: true
+spacing.fixed.px: 24
+width: fill-container
+margin-top.px: 18
+
+-- ftd.image:
+$loop$: $social-wrapper.list-of-socials as $obj
+src: $obj.icon
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: social-wrapper
+
+
+
+
+
+
+
+
+
+-- record social:
+caption title:
+string link:
+ftd.image-src icon:
+
+
+
+-- record post-meta:
+caption title:
+string published-on:
+ftd.image-src post-image:
+optional body body:
+string post-url: /
+author-meta author:
+
+
+
+-- record author-meta:
+caption title:
+ftd.image-src image:
+string bio-url: /
+optional string profile:
+optional string company:
+optional body body:
+
+
+
+
+
+
+
+
+-- component post:
+post-meta meta:
+children child:
+social list list-of-socials:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.image:
+src: $post.meta.post-image
+
+-- ftd.row:
+wrap: true
+spacing.fixed.percent: 5
+width: fill-container
+margin-top.px: 50
+
+-- col:
+width: 25
+
+-- ftd.text: $post.meta.published-on
+role: $inherited.types.label-small
+color: $inherited.colors.text
+
+-- user: $post.meta.author.title
+src: $post.meta.author.image
+body: $post.meta.author.profile
+marginTop: 26
+
+-- end: user
+
+-- social-wrapper: Share
+list-of-socials: $post.list-of-socials
+marginTop: 38
+
+-- end: social-wrapper
+
+-- end: col
+
+-- ftd.column:
+margin-top.px: 50
+width.fixed.percent: 70
+children: $post.child
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: post
+
+
+
+
+
+
+
+
+
+-- component unorderedList:
+unordList list unord-list:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.text: $obj.title
+$loop$: $unorderedList.unord-list as $obj
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- end: ftd.column
+
+-- end: unorderedList
+
+
+
+
+
+
+
+
+
+-- record unordList:
+caption title:
