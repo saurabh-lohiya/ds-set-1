@@ -3,14 +3,15 @@
 -- import: fastn/processors as pr
 
 -- integer $current-page: 1
-
+-- string $site-name: Fastn
 
 -- pr.sitemap-data sitemap:
 $processor$: pr.full-sitemap
 
 
 
-
+-- integer $mobileCompPadd: 30
+-- integer $desktopCompPadd: 50
 -- integer $width: 1180
 -- integer $current-slide: 1
 -- import: fifthtry.github.io/ds-set-1/assets
@@ -26,7 +27,7 @@ $processor$: pr.full-sitemap
 -- component page:
 optional caption title:
 optional body body:
-string brand-name:
+string brand-name: $site-name
 optional ftd.color bgcolor-landing-hero:
 children page-wrap:
 ftd.type-data types: $typo.types
@@ -34,11 +35,11 @@ ftd.color-scheme colors: $cs.main
 pr.toc-item list sections: $sitemap.sections
 integer header-width: $width
 boolean login: false
-optional ftd.image-src icon1:
-optional ftd.image-src icon2:
-optional ftd.image-src icon3:
-optional ftd.image-src icon4:
-optional ftd.image-src avatar:
+optional ftd.image-src icon1: $assets.files.assets.heart-icon.svg
+optional ftd.image-src icon2: $assets.files.assets.notifications-icon.svg
+optional ftd.image-src icon3: $assets.files.assets.shopping_cart-icon.svg
+optional ftd.image-src icon4: $assets.files.assets.search-icon.svg
+optional ftd.image-src avatar: $assets.files.assets.patrica.png
 boolean breadcrumbs: false
 
 -- ftd.column:
@@ -99,7 +100,7 @@ children: $page.page-wrap
 
 -- footer:
 
--- footer-child1: Fastn
+-- footer-copyright: Fastn
 info: Stay in touch with everything you need
 copyright: Copyright ©2022. Fastn Inc.
 src1: $assets.files.assets.meta.svg
@@ -108,36 +109,36 @@ src3: $assets.files.assets.google.svg
 src4: $assets.files.assets.tweak.svg
 src5: $assets.files.assets.ball.svg
 
--- end: footer-child1
+-- end: footer-copyright
 
 -- footer-wrapper:
 
--- footer-child2: Heading2
+-- footer-links: Heading2
 link1: Footer link 1
 link2: Footer link 2
 link3: Footer link 3
 link4: Footer link 4
 link5: Footer link 5
 
--- end: footer-child2
+-- end: footer-links
 
--- footer-child2: Heading3
+-- footer-links: Heading3
 link1: Footer link 1
 link2: Footer link 2
 link3: Footer link 3
 link4: Footer link 4
 link5: Footer link 5
 
--- end: footer-child2
+-- end: footer-links
 
--- footer-child2: Heading4
+-- footer-links: Heading4
 link1: Footer link 1
 link2: Footer link 2
 link3: Footer link 3
 link4: Footer link 4
 link5: Footer link 5
 
--- end: footer-child2
+-- end: footer-links
 
 -- end: footer-wrapper
 
@@ -173,6 +174,9 @@ optional integer padding-right:
 integer width: $width
 
 -- ftd.column:
+
+-- ftd.column:
+if: { ftd.device == "desktop" }
 width: fill-container
 align-content: center
 margin-bottom.px: 30
@@ -220,6 +224,37 @@ body: $promo-banner.body
 src: $promo-banner.src
 
 -- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+width: fill-container
+align-content: center
+margin-bottom.px: 30
+
+-- ftd.column:
+background.solid: $promo-banner.bg-color
+padding-vertical.px: $promo-banner.padding-vertical
+border-radius.px: 20
+padding-horizontal.px: 85
+width: fill-container
+max-width.fixed.px: $promo-banner.width
+align-self: center
+
+-- promo-banner-img:
+src: $promo-banner.src
+
+-- promo-banner-info: $promo-banner.title
+cta-label: $promo-banner.cta-label
+cta-url: $promo-banner.cta-url
+body: $promo-banner.body
+
+-- end: promo-banner-info
+
+-- end: ftd.column
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -324,13 +359,14 @@ src: $feature-card.feature-icon
 border-radius.px: 50
 
 -- ftd.text: $feature-card.title
-margin-top.px: 24 
+margin-top.px: 24
 role: $inherited.types.copy-regular
 
 -- ftd.text:
 margin-top.px: 8 
 role: $inherited.types.copy-small
 max-width.fixed.percent: 60
+max-width.fixed.percent if { ftd.device == "mobile" } :  80
 
 $feature-card.body
 
@@ -364,7 +400,7 @@ width: fill-container
 align-self: center
 align-content: center
 padding-vertical.px: 55
-
+padding-horizontal.px if { ftd.device == "mobile" }: $mobileCompPadd
 -- ftd.text: $features.title
 role: $inherited.types.heading-large
 
@@ -416,6 +452,7 @@ padding-bottom.px: 70
 
 -- ftd.column:
 width: fill-container
+padding-horizontal.px if { ftd.device == "mobile" }: $mobileCompPadd
 max-width.fixed.px: $generation.width
 align-self: center
 spacing.fixed.px: 20 
@@ -524,15 +561,18 @@ padding-vertical.px: 60
 align-self: center
 
 -- ftd.row:
+wrap: true
 padding-vertical.px: 72
-padding-horizontal.px: 75
+padding-horizontal.px if { ftd.device == "desktop" }: 75
+padding-horizontal.px if { ftd.device == "mobile" }: $mobileCompPadd
 background.solid: $inherited.colors.background.step-1
 width: fill-container
 border-radius.px: 20
+spacing.fixed.px: 20
 
 -- ftd.column:
 padding-right.px: 16
-width.fixed.percent: 50
+width.fixed.percent if { ftd.device == "desktop" }: 50
 
 -- ftd.text: $newsletter.title
 role: $inherited.types.heading-small
@@ -542,18 +582,27 @@ color: $inherited.colors.text-strong
 
 -- ftd.column:
 
--- ftd.row:
-spacing.fixed.px: 20
-
 -- ftd.column:
+spacing.fixed.px: 20
+wrap: true
+
+-- ftd.row:
 spacing.fixed.px: 15
+wrap: true
 
 -- ftd.text-input:
 placeholder: $newsletter.cta-placeholder
 padding-vertical.px: 15
 padding-horizontal.px: 15
 border-radius.px: 30
-width.fixed.px: 310
+background.solid: transparent
+max-width.fixed.px: 310
+border-width.px: 1
+border-color: $inherited.colors.border-strong
+
+-- cta-button: $newsletter.cta-label
+
+-- end: ftd.row
 
 -- ftd.row: 
 spacing.fixed.px: 10
@@ -567,13 +616,11 @@ src: $newsletter.info-icon
 role: $inherited.types.label-small
 color: $inherited.colors.text-strong
 
+
 -- end: ftd.row
+
 
 -- end: ftd.column
-
--- cta-button: $newsletter.cta-label
-
--- end: ftd.row
 
 -- end: ftd.column
 
@@ -604,7 +651,7 @@ ftd.image-src src:
 width: fill-container
 padding-vertical.px: 24
 border-bottom-width.px: 1
-border-color: $inherited.colors.border
+border-color: $inherited.colors.border-strong
 
 -- ftd.row:
 width: fill-container
@@ -656,6 +703,7 @@ padding-vertical.px: 70
 -- ftd.column:
 max-width.fixed.px: $faq.width
 width: fill-container
+padding.px if { ftd.device == "mobile" }: $mobileCompPadd
 align-self: center
 
 -- ftd.text: $faq.title
@@ -719,7 +767,9 @@ cta-label: $dashboard.cta-label
 
 -- end: ftd.column
 
--- ftd.image: $dashboard.src
+-- ftd.image:
+if: { ftd.device != "mobile" }
+src: $dashboard.src
 
 -- end: ftd.row
 
@@ -756,13 +806,14 @@ role: $inherited.types.copy-regular
 
 -- ftd.row:
 margin-top.px: 40
+wrap: true
+spacing.fixed.px: 20
 
 -- ftd.text-input:
-margin-right.px: 8
 min-width.fixed.px: 240
 placeholder: $dashboard-info.cta-placeholder
 background.solid: transparent
-border-color: $inherited.colors.background.base
+border-color: $inherited.colors.border-strong
 border-width.px: 1 
 border-radius.px: 30
 padding.px: 15
@@ -902,6 +953,8 @@ height.fixed.px: 48
 
 
 
+
+
 -- component header-links:
 pr.toc-item sections:
 
@@ -970,6 +1023,7 @@ role: $inherited.types.copy-regular
 color: $inherited.colors.text
 
 -- ftd.row:
+wrap: true
 margin-top.px: 30
 spacing.fixed.px: 64
 width: fill-container
@@ -1008,13 +1062,27 @@ background.solid: $inherited.colors.background.base
 align-content: center
 
 -- ftd.row:
+if: { ftd.device == "desktop" }
 max-width.fixed.px: $footer.width
 width: fill-container
 align-self: center
 padding-vertical.px: 100
+spacing: space-between
 children: $footer.footer-wrap
 
 -- end: ftd.row
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+max-width.fixed.px: $footer.width
+width: fill-container
+align-self: center
+padding-vertical.px: 100
+spacing.fixed.px: 40
+align-content: center
+children: $footer.footer-wrap
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -1029,7 +1097,7 @@ children: $footer.footer-wrap
 
 
 
--- component footer-child1:
+-- component footer-copyright:
 caption brand-name:
 string info:
 string copyright:
@@ -1038,39 +1106,47 @@ ftd.image-src src2:
 ftd.image-src src3:
 ftd.image-src src4:
 ftd.image-src src5:
+decimal width: 30
 
 -- ftd.column:
-min-width.fixed.px: 305
+width.fixed.percent if { ftd.device == "mobile" }: 100
+width.fixed.percent if { ftd.device == "desktop" }: $footer-copyright.width
+min-width.fixed.px: 320
+align-content: center
 
--- ftd.text: $footer-child1.brand-name
+-- ftd.column:
+
+-- ftd.text: $footer-copyright.brand-name
 role: $inherited.types.heading-small
 margin-bottom.px: 24
 
--- ftd.text: $footer-child1.info
+-- ftd.text: $footer-copyright.info
 role: $inherited.types.copy-small
 
 -- ftd.row:
 margin-vertical.px: 40
 spacing.fixed.px: 24
 
--- ftd.image: $footer-child1.src1
+-- ftd.image: $footer-copyright.src1
 
--- ftd.image: $footer-child1.src2
+-- ftd.image: $footer-copyright.src2
 
--- ftd.image: $footer-child1.src3
+-- ftd.image: $footer-copyright.src3
 
--- ftd.image: $footer-child1.src4
+-- ftd.image: $footer-copyright.src4
 
--- ftd.image: $footer-child1.src5
+-- ftd.image: $footer-copyright.src5
 
 -- end: ftd.row
 
--- ftd.text: $footer-child1.copyright
+-- ftd.text: $footer-copyright.copyright
 role: $inherited.types.fine-print
 
 -- end: ftd.column
 
--- end: footer-child1
+-- end: ftd.column
+
+-- end: footer-copyright
 
 
 
@@ -1081,7 +1157,7 @@ role: $inherited.types.fine-print
 
 
 
--- component footer-child2:
+-- component footer-links:
 caption title:
 string link1:
 string link2:
@@ -1090,29 +1166,35 @@ string link4:
 string link5:
 
 -- ftd.column:
+min-width.fixed.px: 200
 spacing.fixed.px: 8
+align-content: center
 
--- ftd.text: $footer-child2.title
+-- ftd.column:
+
+-- ftd.text: $footer-links.title
 role: $inherited.types.copy-regular
 
--- ftd.text: $footer-child2.link1
+-- ftd.text: $footer-links.link1
 role: $inherited.types.copy-regular
 
--- ftd.text: $footer-child2.link2
+-- ftd.text: $footer-links.link2
 role: $inherited.types.copy-regular
 
--- ftd.text: $footer-child2.link3
+-- ftd.text: $footer-links.link3
 role: $inherited.types.copy-regular
 
--- ftd.text: $footer-child2.link4
+-- ftd.text: $footer-links.link4
 role: $inherited.types.copy-regular
 
--- ftd.text: $footer-child2.link5
+-- ftd.text: $footer-links.link5
 role: $inherited.types.copy-regular
 
 -- end: ftd.column
 
--- end: footer-child2
+-- end: ftd.column
+
+-- end: footer-links
 
 
 
@@ -1124,13 +1206,29 @@ role: $inherited.types.copy-regular
 
 -- component footer-wrapper:
 children footer-child:
+decimal width: 65
+
+-- ftd.column:
+width.fixed.percent: $footer-wrapper.width
+align-content: center
 
 -- ftd.row:
-spacing: space-around
+if: { ftd.device == "desktop" }
 width: fill-container
+spacing: space-between
 children: $footer-wrapper.footer-child
 
 -- end: ftd.row
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+spacing.fixed.px: 30
+align-content: center
+children: $footer-wrapper.footer-child
+
+-- end: ftd.column
+
+-- end: ftd.column
 
 -- end: footer-wrapper
 
@@ -1249,6 +1347,7 @@ background.solid: $inherited.colors.background.step-1
 width: fill-container
 max-width.fixed.px: $savings.width
 align-self: center
+wrap: true
 
 -- ftd.column:
 align-self: center
@@ -1338,7 +1437,6 @@ margin-left.px: 70
 background.solid: $inherited.colors.background.base
 border-top-left-radius.px: 10
 border-top-right-radius.px: 10
-padding-top.px: 30
 
 -- info-block: Your savings
 
@@ -1441,6 +1539,8 @@ width: fill-container
 max-width.fixed.px: $qoutes.width
 padding-top.px: 190
 padding-bottom.px: 120
+padding-horizontal.px if { ftd.device == "desktop" }: $desktopCompPadd
+padding-horizontal.px if { ftd.device == "mobile" }: $mobileCompPadd
 spacing.fixed.px: 36
 align-self: center
 align-content: center
@@ -2824,3 +2924,14 @@ align-self: center
 -- end: ftd.column 
 
 -- end: breadcrumbs
+
+
+
+
+
+
+
+
+
+
+

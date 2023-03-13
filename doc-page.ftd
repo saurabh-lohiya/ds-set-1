@@ -7,18 +7,13 @@
 brand-name: Fastn
 header-width: 1440
 login: true
-icon1: $assets.files.assets.heart-icon.svg
-icon2: $assets.files.assets.notifications-icon.svg
-icon3: $assets.files.assets.shopping_cart-icon.svg
-icon4: $assets.files.assets.search-icon.svg
-avatar: $assets.files.assets.patrica.png
 breadcrumbs: true
 
 -- lp.page-wrapper:
 width: 1440
 
 -- lp.col:
-width: 22.22
+width: 22
 padding-horizontal: 24
 
 -- lp.left-sidebar: hello
@@ -28,7 +23,7 @@ list-of-navs: $list-of-navs
 -- end: lp.col
 
 -- lp.col:
-width: 48.125
+width: 48
 padding-horizontal: 50
 
 -- lp.blog-sections-wrapper:
@@ -247,7 +242,7 @@ We enable teams to iterate quickly and develop, preview, and ship delightful use
 
 
 -- lp.col:
-width: 29.65
+width: 30
 padding-horizontal: 24
 
 -- end: lp.col
